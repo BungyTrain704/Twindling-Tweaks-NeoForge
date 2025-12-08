@@ -1,0 +1,16 @@
+{
+  "type": "twindlingtweaks:crushing",
+  "id": "twindlingtweaks:diamond_chunks",
+  "ingredients": [
+    {
+      "tag": "twindlingtweaks:above_iron_hammers"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "twindlingtweaks:diamond_chunks"
+  }
+}

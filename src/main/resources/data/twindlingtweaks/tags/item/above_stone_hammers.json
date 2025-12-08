@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "twindlingtweaks:stone_hammer",
+    "twindlingtweaks:iron_hammer",
+    "twindlingtweaks:diamond_hammer",
+    "twindlingtweaks:obsidian_hammer"
+  ]
+}

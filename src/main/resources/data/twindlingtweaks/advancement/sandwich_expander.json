@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:sl_sandwich_toasted"
+    },
+    "title": "Sandwich Expander",
+    "description": "Obtained a Toasted Steak and Lettuce Sandwich.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:sandwich_novice",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:sl_sandwich_toasted"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

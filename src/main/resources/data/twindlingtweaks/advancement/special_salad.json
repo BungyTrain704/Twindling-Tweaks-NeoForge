@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:special_salad"
+    },
+    "title": "Chef's Kiss",
+    "description": "Obtained a Special Salad.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:spring_salad",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:special_salad"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

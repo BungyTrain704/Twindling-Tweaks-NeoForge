@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:hearty_stew"
+    },
+    "title": "This is... Super Stew.",
+    "description": "Obtained Hearty Stew.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:salad",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:hearty_stew"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

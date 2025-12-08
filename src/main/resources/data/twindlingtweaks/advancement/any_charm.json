@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:basic_dirt_charm"
+    },
+    "title": "Let him cook... with Charms!",
+    "description": "Crafted any charm.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:empty_charm",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:basic_dirt_charm",
+              "twindlingtweaks:basic_dirt_path_charm",
+              "twindlingtweaks:advanced_dirt_path_charm",
+              "twindlingtweaks:blue_dirt_charm",
+              "twindlingtweaks:blue_dirt_path_charm",
+              "twindlingtweaks:red_dirt_charm",
+              "twindlingtweaks:red_dirt_path_charm",
+              "twindlingtweaks:yellow_dirt_charm",
+              "twindlingtweaks:yellow_dirt_path_charm",
+              "twindlingtweaks:combined_dirt_charm",
+              "twindlingtweaks:combined_dirt_path_charm"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

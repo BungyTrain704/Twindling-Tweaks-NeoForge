@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:unstable_alluminite_ingot"
+    },
+    "title": "It's Over 9000!!!",
+    "description": "Obtained an Unstable Alluminite Ingot!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:reinforced_alluminite_ingot",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:unstable_alluminite_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

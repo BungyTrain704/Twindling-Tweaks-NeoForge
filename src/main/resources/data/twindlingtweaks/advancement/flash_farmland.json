@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:flash_farmland"
+    },
+    "title": "Title Obtained: Speedster",
+    "description": "Obtained Flash Farmland.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:yellow_dirt",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:flash_farmland"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

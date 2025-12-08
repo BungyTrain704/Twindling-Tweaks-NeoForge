@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:tomato_seeds"
+    },
+    "title": "Red, and Ready for Planting!",
+    "description": "Obtained Tomato Seeds. (Hint: Try Breaking Grass)",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:lettuce",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:tomato_seeds"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

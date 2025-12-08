@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "twindlingtweaks:block/catalpa_planks"
+  }
+}

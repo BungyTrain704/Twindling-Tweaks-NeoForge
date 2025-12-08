@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:goat_milk"
+    },
+    "title": "I did not just do that.",
+    "description": "Milk a Goat.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:orange_seed_milk_bucket",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:goat_milk"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

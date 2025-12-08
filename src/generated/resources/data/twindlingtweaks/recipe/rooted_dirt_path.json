@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "minecraft:rooted_dirt"
+    },
+    {
+      "item": "minecraft:rooted_dirt"
+    },
+    {
+      "item": "minecraft:rooted_dirt"
+    },
+    {
+      "item": "twindlingtweaks:basic_dirt_path_charm"
+    }
+  ],
+  "result": {
+    "count": 6,
+    "id": "twindlingtweaks:rooted_dirt_path"
+  }
+}

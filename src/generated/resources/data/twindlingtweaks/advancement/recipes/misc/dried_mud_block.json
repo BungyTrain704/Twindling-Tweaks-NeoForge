@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dried_mud_ball": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twindlingtweaks:dried_mud_ball"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twindlingtweaks:dried_mud_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dried_mud_ball"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twindlingtweaks:dried_mud_block"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "values": [
+    "twindlingtweaks:alluminite_block",
+    "twindlingtweaks:raw_alluminite_block",
+    "twindlingtweaks:alluminite_ore",
+    "twindlingtweaks:deepslate_alluminite_ore",
+    "twindlingtweaks:luminium_ore",
+    "twindlingtweaks:deepslate_luminium_ore",
+    "twindlingtweaks:mud_ore",
+    "twindlingtweaks:deepslate_mud_ore",
+    "twindlingtweaks:luminium_block",
+    "twindlingtweaks:raw_luminium_block",
+    "twindlingtweaks:crusher",
+    "twindlingtweaks:filterer",
+    "twindlingtweaks:obsidian_forger",
+    "twindlingtweaks:reinforced_obsidian",
+    "twindlingtweaks:sugar_ore",
+    "twindlingtweaks:deepslate_sugar_ore",
+    "twindlingtweaks:salt_ore",
+    "twindlingtweaks:deepslate_salt_ore",
+    "twindlingtweaks:compressed_mud_block"
+  ]
+}

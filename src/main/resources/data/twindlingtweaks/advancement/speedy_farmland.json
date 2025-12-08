@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:speedy_farmland"
+    },
+    "title": "Gotta go fast",
+    "description": "Obtained Speedy Farmland.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:blue_dirt",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:speedy_farmland"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

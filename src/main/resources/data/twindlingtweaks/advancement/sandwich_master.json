@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:meaty_sandwich"
+    },
+    "title": "Sandwich Master",
+    "description": "Obtained a Meaty Sandwich.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:sandwich_champion",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:meaty_sandwich"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

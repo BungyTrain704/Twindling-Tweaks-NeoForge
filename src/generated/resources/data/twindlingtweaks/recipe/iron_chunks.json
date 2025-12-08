@@ -1,0 +1,16 @@
+{
+  "type": "twindlingtweaks:crushing",
+  "id": "twindlingtweaks:iron_chunks",
+  "ingredients": [
+    {
+      "tag": "twindlingtweaks:above_iron_hammers"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "twindlingtweaks:iron_chunks"
+  }
+}

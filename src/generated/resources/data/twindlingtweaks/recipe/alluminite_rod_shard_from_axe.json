@@ -1,0 +1,16 @@
+{
+  "type": "twindlingtweaks:crushing",
+  "id": "twindlingtweaks:alluminite_rod_shard_from_axe",
+  "ingredients": [
+    {
+      "tag": "twindlingtweaks:above_iron_hammers"
+    },
+    {
+      "item": "twindlingtweaks:alluminite_axe"
+    }
+  ],
+  "output": {
+    "count": 3,
+    "id": "twindlingtweaks:alluminite_rod_shard"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:red_dirt"
+    },
+    "title": "Blazing",
+    "description": "Obtained Red Dirt.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:flash_farmland",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:red_dirt"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

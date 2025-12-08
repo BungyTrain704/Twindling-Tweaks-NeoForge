@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "G": {
+      "item": "minecraft:gold_block"
+    },
+    "I": {
+      "item": "minecraft:gold_ingot"
+    },
+    "Y": {
+      "item": "twindlingtweaks:yellow_dirt"
+    }
+  },
+  "pattern": [
+    " I ",
+    "GYG",
+    " G "
+  ],
+  "result": {
+    "count": 1,
+    "id": "twindlingtweaks:flash_farmland"
+  }
+}

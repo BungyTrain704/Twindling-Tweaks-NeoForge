@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:goat_butter"
+    },
+    "title": "You did it, but at what cost?",
+    "description": "Consume butter.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:successful_pasteurizer",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "twindlingtweaks:goat_butter"
+          ]
+        }
+      }
+    }
+  }
+}

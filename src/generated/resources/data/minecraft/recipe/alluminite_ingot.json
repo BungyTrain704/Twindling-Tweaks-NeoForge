@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "twindlingtweaks:alluminite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "twindlingtweaks:alluminite_ingot"
+  }
+}

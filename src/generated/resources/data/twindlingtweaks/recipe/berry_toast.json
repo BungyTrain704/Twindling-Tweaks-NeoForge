@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "twindlingtweaks:blueberries"
+    },
+    {
+      "item": "twindlingtweaks:toast"
+    },
+    {
+      "item": "twindlingtweaks:raspberries"
+    },
+    {
+      "item": "twindlingtweaks:cooking_knife"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "twindlingtweaks:berry_toast"
+  }
+}

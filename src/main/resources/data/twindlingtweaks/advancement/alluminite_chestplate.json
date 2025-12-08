@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:alluminite_chestplate"
+    },
+    "title": "Reinforced and Ready",
+    "description": "Obtained any piece of Alluminite Armor",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:alluminite_pickaxe",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:alluminite_helmet",
+              "twindlingtweaks:alluminite_chestplate",
+              "twindlingtweaks:alluminite_leggings",
+              "twindlingtweaks:alluminite_boots"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:obsidian_forger"
+    },
+    "title": "On The Path To The Dark Side",
+    "description": "Obtained an Obsidian Forger.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:alluminite",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:obsidian_forger"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

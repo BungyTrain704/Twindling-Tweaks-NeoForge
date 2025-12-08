@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:ranch_bottle"
+    },
+    "title": "Something's off here...",
+    "description": "Obtained Ranch Dressing.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:crouton",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:ranch_bottle"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:steak_lettuce_sandwich"
+    },
+    "title": "Sandwich Novice",
+    "description": "Obtained a Steak and Lettuce Sandwich.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:ketchup_bottle",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:steak_lettuce_sandwich"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

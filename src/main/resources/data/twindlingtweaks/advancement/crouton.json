@@ -1,0 +1,27 @@
+ {
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:crouton"
+    },
+    "title": "Crouton!",
+    "description": "Obtained a Crouton.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:cucumber",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:crouton"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

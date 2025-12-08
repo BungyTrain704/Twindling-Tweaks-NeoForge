@@ -1,0 +1,13 @@
+// 1.21.1	2025-05-30T16:06:27.0835172	Tags for minecraft:item mod id twindlingtweaks
+18d08450bca33091ad8ea123b5412538d7f40965 data/minecraft/tags/item/axes.json
+b25be8620769f2e1c2ebf3cbbf7cb6122fd2a466 data/minecraft/tags/item/creeper_drop_music_discs.json
+de644fc6963f4366a555c4517f5c898c84582694 data/minecraft/tags/item/dirt.json
+32c7c1ca87a126097813f18138497d62a68a7d86 data/minecraft/tags/item/flowers.json
+511d50ae8de0d65acc941e2780acbcdaefc8f372 data/minecraft/tags/item/hoes.json
+4859c79473447132b0ee8b3b43ff4f37aaff4bc8 data/minecraft/tags/item/logs.json
+4859c79473447132b0ee8b3b43ff4f37aaff4bc8 data/minecraft/tags/item/logs_that_burn.json
+bc7045fa4efac353adebf31fec18f1a978379551 data/minecraft/tags/item/pickaxes.json
+13ab64c32c1eff764737d3863621c7b56c5cd498 data/minecraft/tags/item/planks.json
+de3f10b11393ab8a1acdb080346831d6c2c61f9a data/minecraft/tags/item/shovels.json
+aede1060d144509c0adddf84cce6fbbe55462665 data/minecraft/tags/item/swords.json
+ab1a4fa9743844ecf4b0e3aadfff3f50eeaf3e96 data/minecraft/tags/item/trimmable_armor.json

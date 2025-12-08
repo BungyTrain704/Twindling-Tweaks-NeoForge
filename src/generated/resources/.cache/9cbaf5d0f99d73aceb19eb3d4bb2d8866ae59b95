@@ -1,0 +1,16 @@
+// 1.21.1	2025-06-15T13:44:27.7932698	Tags for minecraft:block mod id twindlingtweaks
+de644fc6963f4366a555c4517f5c898c84582694 data/minecraft/tags/block/dirt.json
+c53f4e6279bd829913f36253b3e62ed4198a8619 data/minecraft/tags/block/fences.json
+ef45dfaf89bc573090b3da2f4218d6a3cd51edc3 data/minecraft/tags/block/fence_gates.json
+32c7c1ca87a126097813f18138497d62a68a7d86 data/minecraft/tags/block/flowers.json
+4859c79473447132b0ee8b3b43ff4f37aaff4bc8 data/minecraft/tags/block/logs.json
+4859c79473447132b0ee8b3b43ff4f37aaff4bc8 data/minecraft/tags/block/logs_that_burn.json
+4b2150db4679a513eb0f06b2a2ba2948277767c7 data/minecraft/tags/block/mineable/axe.json
+c9417cba978efff32a0cc32b3f916a674451fe22 data/minecraft/tags/block/mineable/pickaxe.json
+7d21601a2da9ff0d7f13424becb4bbe6fb8c6c8e data/minecraft/tags/block/mineable/shovel.json
+624438d8ffdb04fae9ac2fcf20b3fff0928eca85 data/minecraft/tags/block/needs_diamond_tool.json
+4158b49f67ac86c6319c23ccff98dc0e71a36014 data/minecraft/tags/block/needs_iron_tool.json
+1bd155d4c1f132c74db4c3d61a2652b1ea8f8998 data/minecraft/tags/block/needs_stone_tool.json
+13ab64c32c1eff764737d3863621c7b56c5cd498 data/minecraft/tags/block/planks.json
+f1ca3b8c3974583b7bc1337f21ca0a34ae020fff data/twindlingtweaks/tags/block/incorrect_for_obsidian_tool.json
+35692607ad1d366d00afdae57b9cc2cb1e173388 data/twindlingtweaks/tags/block/needs_obsidian_tool.json

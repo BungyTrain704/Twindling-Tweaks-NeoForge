@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:fried_egg"
+    },
+    "title": "Eggcellent",
+    "description": "Obtained any Cooked Egg.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:extras",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:boiled_egg",
+              "twindlingtweaks:fried_egg"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

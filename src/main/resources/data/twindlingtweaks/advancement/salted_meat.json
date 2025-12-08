@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:salted_raw_beef"
+    },
+    "title": "Salt Makes It All Better",
+    "description": "Salted any piece of meat",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:agriculture",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:salted_raw_beef",
+              "twindlingtweaks:salted_raw_chicken",
+              "twindlingtweaks:salted_raw_porkchop",
+              "twindlingtweaks:salted_raw_mutton",
+              "twindlingtweaks:salted_raw_rabbit",
+              "twindlingtweaks:salted_raw_cod",
+              "twindlingtweaks:salted_raw_salmon"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

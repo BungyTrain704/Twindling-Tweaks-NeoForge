@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:alluminite_ingot"
+    },
+    "title": "A Start To Ores!",
+    "description": "Obtained an Alluminite Ingot.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "twindlingtweaks:textures/block/alluminite_block.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:alluminite_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

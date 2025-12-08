@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:fiery_farmland"
+    },
+    "title": "Fiery Passion",
+    "description": "Obtained Fiery Farmland.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:red_dirt",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:fiery_farmland"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

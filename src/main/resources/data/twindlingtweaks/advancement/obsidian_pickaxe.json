@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:obsidian_pickaxe"
+    },
+    "title": "Tough, Tough, and Tougher.",
+    "description": "Obtained any Obsidian Tool.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:reinforced_obsidian",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:obsidian_sword",
+              "twindlingtweaks:obsidian_axe",
+              "twindlingtweaks:obsidian_pickaxe",
+              "twindlingtweaks:obsidian_shovel",
+              "twindlingtweaks:obsidian_hoe",
+              "twindlingtweaks:obsidian_hammer"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

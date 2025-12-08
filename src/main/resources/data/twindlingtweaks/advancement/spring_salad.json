@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:spring_salad"
+    },
+    "title": "I'll Salad It To Ya!",
+    "description": "Obtained a Spring Salad!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:salad",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:spring_salad"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

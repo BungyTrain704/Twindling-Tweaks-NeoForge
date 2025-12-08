@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "twindlingtweaks:block/red_maple_planks",
+    "east": "twindlingtweaks:block/pasteurizer_west",
+    "north": "twindlingtweaks:block/pasteurizer_north",
+    "south": "twindlingtweaks:block/pasteurizer_south",
+    "up": "twindlingtweaks:block/pasteurizer_up",
+    "west": "twindlingtweaks:block/pasteurizer_east",
+    "particle": "twindlingtweaks:block/pasteurizer_up"
+  }
+}

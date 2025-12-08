@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "twindlingtweaks:alluminite_rod_shard"
+    },
+    "R": {
+      "item": "twindlingtweaks:reinforced_alluminite_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "RSR",
+    "AAA"
+  ],
+  "result": {
+    "count": 2,
+    "id": "twindlingtweaks:alluminite_rod"
+  }
+}

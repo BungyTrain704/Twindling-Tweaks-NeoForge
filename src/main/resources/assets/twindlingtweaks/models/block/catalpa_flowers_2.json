@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/flowerbed_2",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "flowerbed": "twindlingtweaks:block/catalpa_flowers",
+    "stem": "twindlingtweaks:block/catalpa_flowers_stem"
+  }
+}

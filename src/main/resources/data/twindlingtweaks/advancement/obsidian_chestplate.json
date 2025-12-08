@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:obsidian_chestplate"
+    },
+    "title": "Defensive Overlord",
+    "description": "Obtained any piece of Obsidian Armor.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:obsidian_pickaxe",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:obsidian_helmet",
+              "twindlingtweaks:obsidian_chestplate",
+              "twindlingtweaks:obsidian_leggings",
+              "twindlingtweaks:obsidian_boots"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

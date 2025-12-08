@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/iron_block",
+    "east": "twindlingtweaks:block/crusher_west",
+    "north": "twindlingtweaks:block/crusher_north",
+    "south": "twindlingtweaks:block/crusher_south",
+    "up": "twindlingtweaks:block/crusher_up",
+    "west": "twindlingtweaks:block/crusher_east",
+    "particle": "twindlingtweaks:block/crusher_up"
+  }
+}

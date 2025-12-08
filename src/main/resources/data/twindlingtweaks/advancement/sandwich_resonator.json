@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:cheese_meat_sandwich"
+    },
+    "title": "Sandwich Resonator",
+    "description": "Obtained a Cheese and Meat Sandwich.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:sandwich_expander",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:cheese_meat_sandwich"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

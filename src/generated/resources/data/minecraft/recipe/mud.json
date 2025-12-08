@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "twindlingtweaks:mud_block"
+    },
+    {
+      "item": "twindlingtweaks:mud_block"
+    },
+    {
+      "item": "twindlingtweaks:mud_block"
+    },
+    {
+      "item": "twindlingtweaks:dried_mud_block"
+    },
+    {
+      "item": "twindlingtweaks:basic_dirt_charm"
+    }
+  ],
+  "result": {
+    "count": 12,
+    "id": "minecraft:mud"
+  }
+}

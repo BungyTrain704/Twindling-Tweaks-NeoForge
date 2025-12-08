@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "twindlingtweaks:block/banana_leaves_0"
+      },
+      {
+        "model": "twindlingtweaks:block/banana_leaves_1"
+      },
+      {
+        "model": "twindlingtweaks:block/banana_leaves_2"
+      },
+      {
+        "model": "twindlingtweaks:block/banana_leaves_3"
+      }
+    ]
+  }
+}

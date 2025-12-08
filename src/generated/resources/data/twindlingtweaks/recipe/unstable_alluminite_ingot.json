@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "twindlingtweaks:reinforced_luminium_gem"
+    },
+    "O": {
+      "item": "twindlingtweaks:reinforced_obsidian"
+    },
+    "R": {
+      "item": "twindlingtweaks:reinforced_alluminite_ingot"
+    }
+  },
+  "pattern": [
+    "LOL",
+    "ORO",
+    "LOL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "twindlingtweaks:unstable_alluminite_ingot"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:twindling_tweaks_farmland"
+    },
+    "title": "How have you done this???",
+    "description": "Obtained Twindling Tweaks Farmland.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:combined_dirt",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:twindling_tweaks_farmland"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:lettuce_seeds"
+    },
+    "title": "Bruce Leetuce",
+    "description": "Obtained Lettuce Seeds. (Hint: Try Breaking Grass)",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:agriculture",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:lettuce_seeds"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

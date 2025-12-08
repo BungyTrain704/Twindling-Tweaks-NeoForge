@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:vegan_sandwich"
+    },
+    "title": "Sandwich Champion",
+    "description": "Obtained a Vegan Sandwich.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:sandwich_resonator",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:vegan_sandwich"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

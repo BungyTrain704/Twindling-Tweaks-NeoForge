@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:orange_seeds"
+    },
+    "title": "Now this looks promising!",
+    "description": "Obtained Orange Seeds. (Hint: Try Breaking Grass)",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:cucumber",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:orange_seeds"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

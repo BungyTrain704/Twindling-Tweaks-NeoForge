@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cake_slice3",
+  "textures": {
+    "bottom": "twindlingtweaks:block/goat_cake_bottom",
+    "inside": "twindlingtweaks:block/goat_cake_inner",
+    "side": "twindlingtweaks:block/goat_cake_side",
+    "top": "twindlingtweaks:block/goat_cake_top"
+  }
+}

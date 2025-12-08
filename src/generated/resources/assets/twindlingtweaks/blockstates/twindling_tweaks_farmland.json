@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "moisture=0": {
+      "model": "twindlingtweaks:block/twindling_tweaks_farmland"
+    },
+    "moisture=1": {
+      "model": "twindlingtweaks:block/twindling_tweaks_farmland_moist"
+    },
+    "moisture=2": {
+      "model": "twindlingtweaks:block/twindling_tweaks_farmland_moist"
+    },
+    "moisture=3": {
+      "model": "twindlingtweaks:block/twindling_tweaks_farmland_moist"
+    },
+    "moisture=4": {
+      "model": "twindlingtweaks:block/twindling_tweaks_farmland_moist"
+    },
+    "moisture=5": {
+      "model": "twindlingtweaks:block/twindling_tweaks_farmland_moist"
+    },
+    "moisture=6": {
+      "model": "twindlingtweaks:block/twindling_tweaks_farmland_moist"
+    },
+    "moisture=7": {
+      "model": "twindlingtweaks:block/twindling_tweaks_farmland_moist"
+    }
+  }
+}

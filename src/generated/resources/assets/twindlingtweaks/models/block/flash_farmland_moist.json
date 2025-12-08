@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/template_farmland",
+  "textures": {
+    "dirt": "twindlingtweaks:block/yellow_dirt",
+    "particle": "twindlingtweaks:block/flash_farmland_moist",
+    "top": "twindlingtweaks:block/flash_farmland_moist"
+  }
+}

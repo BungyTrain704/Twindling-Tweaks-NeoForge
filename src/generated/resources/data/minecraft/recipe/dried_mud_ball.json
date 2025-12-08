@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "twindlingtweaks:compressed_mud_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "twindlingtweaks:dried_mud_ball"
+  }
+}

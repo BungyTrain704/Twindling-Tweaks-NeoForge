@@ -1,0 +1,16 @@
+{
+  "type": "twindlingtweaks:crushing",
+  "id": "twindlingtweaks:orange_seed_powder",
+  "ingredients": [
+    {
+      "tag": "twindlingtweaks:above_stone_hammers"
+    },
+    {
+      "item": "twindlingtweaks:orange_seeds"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "twindlingtweaks:orange_seed_powder"
+  }
+}

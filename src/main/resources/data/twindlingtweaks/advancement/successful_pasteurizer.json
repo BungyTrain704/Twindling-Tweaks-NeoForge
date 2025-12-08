@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:goat_cheese"
+    },
+    "title": "Pasteurized Payday",
+    "description": "Successfully used the Pasteurizer.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:goat_milk",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:goat_cheese",
+              "twindlingtweaks:goat_ice_cream",
+              "twindlingtweaks:vanilla_goat_yogurt",
+              "twindlingtweaks:goat_butter"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

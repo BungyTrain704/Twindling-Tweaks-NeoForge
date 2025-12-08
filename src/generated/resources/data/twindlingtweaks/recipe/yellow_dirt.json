@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": {
+      "item": "minecraft:gold_block"
+    },
+    "C": {
+      "item": "twindlingtweaks:yellow_dirt_charm"
+    },
+    "I": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    " B ",
+    "ICI",
+    " B "
+  ],
+  "result": {
+    "count": 4,
+    "id": "twindlingtweaks:yellow_dirt"
+  }
+}

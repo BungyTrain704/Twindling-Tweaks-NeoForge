@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "twindlingtweaks:basic_dirt_charm"
+    }
+  ],
+  "result": {
+    "count": 10,
+    "id": "minecraft:coarse_dirt"
+  }
+}
