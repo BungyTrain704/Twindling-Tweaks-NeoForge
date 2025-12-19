@@ -50,7 +50,7 @@ public class CrusherMenu extends AbstractContainerMenu {
         if (handler != null) {
             this.addSlot(new SlotItemHandler(handler, 0, 35, 8));
             this.addSlot(new SlotItemHandler(handler, 1, 35, 35));
-            this.addSlot(new ModResultSlot(handler, 2, 115, 34));
+            this.addSlot(new ModResultSlot(handler, 2, 116, 35));
         }
 
         addDataSlots(data);

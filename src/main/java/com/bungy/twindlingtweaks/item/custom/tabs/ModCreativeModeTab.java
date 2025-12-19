@@ -25,6 +25,7 @@ public class ModCreativeModeTab {
                         pOutput.accept(ModItems.ORANGE_SEED_MILK.get());
                         pOutput.accept(ModItems.IRON_INFUSED_MILK.get());
                         pOutput.accept(ModItems.DIAMOND_INFUSED_MILK.get());
+                        pOutput.accept(ModItems.ORANGE_SEED_POWDER.get());
                         pOutput.accept(ModItems.SALAD_TOPPINGS.get());
                         pOutput.accept(ModItems.SPRING_SALAD_TOPPINGS.get());
                         pOutput.accept(ModItems.SPECIAL_SALAD_TOPPINGS.get());

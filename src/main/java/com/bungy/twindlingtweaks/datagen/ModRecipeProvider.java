@@ -920,128 +920,151 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     private void generateVanillaSmeltingRecipes(RecipeOutput output) {
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.RAW_ALLUMINITE_BLOCK.get()), RecipeCategory.BUILDING_BLOCKS,
                 ModBlocks.ALLUMINITE_BLOCK.get(),
-                5, 110);
+                5, 110).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "alluminite_block_from_smelting");
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.RAW_ALLUMINITE_BLOCK.get()), RecipeCategory.BUILDING_BLOCKS,
                 ModBlocks.ALLUMINITE_BLOCK.get(),
-                5, 80);
+                5, 80).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "alluminite_block_from_blasting");
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.RAW_ALLUMINITE.get()), RecipeCategory.MISC,
                 ModItems.ALLUMINITE_INGOT.get(),
-                5, 90);
+                5, 90).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "alluminite_ingot_from_smelting");
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModItems.RAW_ALLUMINITE.get()), RecipeCategory.MISC,
                 ModItems.ALLUMINITE_INGOT.get(),
-                6, 75);
+                6, 75).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "alluminite_ingot_from_blasting");
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.MUD_BALL.get()), RecipeCategory.MISC,
                 ModItems.DRIED_MUD_BALL.get(),
-                6, 140);
+                6, 140).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "dried_mud_ball_from_smelting");
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModItems.MUD_BALL.get()), RecipeCategory.MISC,
                 ModItems.DRIED_MUD_BALL.get(),
-                6, 70);
+                6, 70).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "dried_mud_ball_from_blasting");
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.MUD_BLOCK.get()), RecipeCategory.MISC,
                 ModBlocks.DRIED_MUD_BLOCK.get(),
-                6, 180);
+                6, 180).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "dried_mud_block_from_smelting");
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.MUD_BLOCK.get()), RecipeCategory.MISC,
                 ModBlocks.DRIED_MUD_BLOCK.get(),
-                6, 90);
+                6, 90).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "dried_mud_block_from_blasting");
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Items.EGG), RecipeCategory.FOOD,
                 ModItems.BOILED_EGG.get(),
-                5, 200);
+                5, 200).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(output);
         SimpleCookingRecipeBuilder.smoking(Ingredient.of(Items.EGG), RecipeCategory.FOOD,
                 ModItems.BOILED_EGG.get(),
-                5, 100);
+                5, 100).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "boiled_egg_from_smoking");
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Items.BREAD), RecipeCategory.FOOD,
                 ModItems.CROUTON.get(),
-                6, 180);
+                6, 180).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(output);
         SimpleCookingRecipeBuilder.smoking(Ingredient.of(Items.BREAD), RecipeCategory.FOOD,
                 ModItems.CROUTON.get(),
-                6, 90);
+                6, 90).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "crouton_from_smoking");
         SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(Items.BREAD), RecipeCategory.FOOD,
                 ModItems.CROUTON.get(),
-                6, 565);
+                6, 565).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "crouton_from_campfire_cooking");
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.BREAD_SLICE.get()), RecipeCategory.FOOD,
                 ModItems.TOAST.get(),
-                6, 200);
+                6, 200).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(output);
         SimpleCookingRecipeBuilder.smoking(Ingredient.of(ModItems.BREAD_SLICE.get()), RecipeCategory.FOOD,
                 ModItems.TOAST.get(),
-                6, 100);
+                6, 100).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "toast_from_smoking");
         SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(ModItems.BREAD_SLICE.get()), RecipeCategory.FOOD,
                 ModItems.TOAST.get(),
-                6, 600);
+                6, 600).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "toast_from_campfire_cooking");
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.SALTED_RAW_BEEF.get()), RecipeCategory.FOOD,
                 Items.COOKED_BEEF,
-                5, 200);
+                5, 200).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(output);
         SimpleCookingRecipeBuilder.smoking(Ingredient.of(ModItems.SALTED_RAW_BEEF.get()), RecipeCategory.FOOD,
                 Items.COOKED_BEEF,
-                5, 100);
+                5, 100).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "cooked_beef_from_smoking");
         SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(ModItems.SALTED_RAW_BEEF.get()), RecipeCategory.FOOD,
                 Items.COOKED_BEEF,
-                5, 600);
+                5, 600).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "cooked_beef_from_campfire_cooking");
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.SALTED_RAW_CHICKEN.get()), RecipeCategory.FOOD,
                 Items.COOKED_CHICKEN,
-                5, 200);
+                5, 200).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(output);
         SimpleCookingRecipeBuilder.smoking(Ingredient.of(ModItems.SALTED_RAW_CHICKEN.get()), RecipeCategory.FOOD,
                 Items.COOKED_CHICKEN,
-                5, 100);
+                5, 100).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "cooked_chicken_from_smoking");
         SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(ModItems.SALTED_RAW_CHICKEN.get()), RecipeCategory.FOOD,
                 Items.COOKED_CHICKEN,
-                5, 600);
+                5, 600).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "cooked_chicken_from_campfire_cooking");
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.SALTED_RAW_COD.get()), RecipeCategory.FOOD,
                 Items.COOKED_COD,
-                5, 200);
+                5, 200).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(output);
         SimpleCookingRecipeBuilder.smoking(Ingredient.of(ModItems.SALTED_RAW_COD.get()), RecipeCategory.FOOD,
                 Items.COOKED_COD,
-                5, 100);
+                5, 100).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output,"cooked_cod_from_smoking");
         SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(ModItems.SALTED_RAW_COD.get()), RecipeCategory.FOOD,
                 Items.COOKED_COD,
-                5, 600);
+                5, 600).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "cooked_cod_from_campfire_cooking");
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.SALTED_RAW_MUTTON.get()), RecipeCategory.FOOD,
                 Items.COOKED_MUTTON,
-                5, 200);
+                5, 200).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(output);
         SimpleCookingRecipeBuilder.smoking(Ingredient.of(ModItems.SALTED_RAW_MUTTON.get()), RecipeCategory.FOOD,
                 Items.COOKED_MUTTON,
-                5, 100);
+                5, 100).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "cooked_mutton_from_smoking");
         SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(ModItems.SALTED_RAW_MUTTON.get()), RecipeCategory.FOOD,
                 Items.COOKED_MUTTON,
-                5, 600);
+                5, 600).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "cooked_mutton_from_campfire_cooking");
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.SALTED_RAW_PORKCHOP.get()), RecipeCategory.FOOD,
                 Items.COOKED_PORKCHOP,
-                5, 200);
+                5, 200).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(output);
         SimpleCookingRecipeBuilder.smoking(Ingredient.of(ModItems.SALTED_RAW_PORKCHOP.get()), RecipeCategory.FOOD,
                 Items.COOKED_PORKCHOP,
-                5, 100);
+                5, 100).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "cooked_porkchop_from_smoking");
         SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(ModItems.SALTED_RAW_PORKCHOP.get()), RecipeCategory.FOOD,
                 Items.COOKED_PORKCHOP,
-                5, 600);
+                5, 600).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "cooked_porkchop_from_campfire_cooking");
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.SALTED_RAW_SALMON.get()), RecipeCategory.FOOD,
                 Items.COOKED_SALMON,
-                5, 200);
+                5, 200).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(output);
         SimpleCookingRecipeBuilder.smoking(Ingredient.of(ModItems.SALTED_RAW_SALMON.get()), RecipeCategory.FOOD,
                 Items.COOKED_SALMON,
-                5, 100);
+                5, 100).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "cooked_salmon_from_smoking");
         SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(ModItems.SALTED_RAW_SALMON.get()), RecipeCategory.FOOD,
                 Items.COOKED_SALMON,
-                5, 600);
-
-        SimpleCookingRecipeBuilder.smoking(Ingredient.of(Items.EGG), RecipeCategory.FOOD,
-                ModItems.BOILED_EGG.get(),
-                5, 100);
+                5, 600).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "cooked_salmon_from_campfire_cooking");
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModTags.Items.CATALPA_LOGS), RecipeCategory.MISC,
                 Items.CHARCOAL,
-                5, 200);
+                5, 200).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "charcoal_from_catalpa_logs");
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModTags.Items.RED_MAPLE_LOGS), RecipeCategory.MISC,
                 Items.CHARCOAL,
-                5, 200);
+                5, 200).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "charcoal_from_red_maple_logs");
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.COMPRESSED_MUD_BLOCK.get()), RecipeCategory.MISC,
                 Blocks.TERRACOTTA,
-                6, 200);
+                6, 200).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(output);
     }
 
     private void generateFiltererRecipes(RecipeOutput output) {

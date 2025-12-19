@@ -48,10 +48,10 @@ public class ModPlacedFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         RED_MAPLE_PLACED = register(context, RED_MAPLE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RED_MAPLE_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1F, 2), ModBlocks.RED_MAPLE_SAPLING.get()));
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.005f,  2), ModBlocks.RED_MAPLE_SAPLING.get()));
 
         CATALPA_PLACED = register(context, CATALPA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CATALPA_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2), ModBlocks.CATALPA_SAPLING.get()));
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.005f, 2), ModBlocks.CATALPA_SAPLING.get()));
 
         BANANA_PLACED = register(context, BANANA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BANANA_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2), ModBlocks.BANANA_SAPLING.get()));
