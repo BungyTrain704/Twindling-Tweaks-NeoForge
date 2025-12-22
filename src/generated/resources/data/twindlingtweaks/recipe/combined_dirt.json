@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": {
+      "item": "twindlingtweaks:luminium_block"
+    },
+    "C": {
+      "item": "twindlingtweaks:combined_dirt_charm"
+    },
+    "R": {
+      "item": "twindlingtweaks:reinforced_luminium_gem"
+    }
+  },
+  "pattern": [
+    " R ",
+    "BCB",
+    " R "
+  ],
+  "result": {
+    "count": 6,
+    "id": "twindlingtweaks:combined_dirt"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/dirt_path",
+  "textures": {
+    "bottom": "minecraft:block/soul_sand",
+    "particle": "minecraft:block/soul_sand",
+    "side": "twindlingtweaks:block/soul_sand_path_side",
+    "top": "twindlingtweaks:block/soul_sand_path_top"
+  }
+}

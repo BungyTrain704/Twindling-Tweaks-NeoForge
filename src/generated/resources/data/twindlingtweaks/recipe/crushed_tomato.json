@@ -1,0 +1,16 @@
+{
+  "type": "twindlingtweaks:crushing",
+  "id": "twindlingtweaks:crushed_tomato",
+  "ingredients": [
+    {
+      "tag": "twindlingtweaks:above_stone_hammers"
+    },
+    {
+      "item": "twindlingtweaks:tomato"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "twindlingtweaks:crushed_tomato"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "catalpa",
+  "ingredients": [
+    {
+      "item": "twindlingtweaks:catalpa_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "twindlingtweaks:catalpa_button"
+  }
+}

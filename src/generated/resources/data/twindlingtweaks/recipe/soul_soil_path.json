@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "minecraft:soul_soil"
+    },
+    {
+      "item": "minecraft:soul_soil"
+    },
+    {
+      "item": "minecraft:soul_soil"
+    },
+    {
+      "item": "twindlingtweaks:advanced_dirt_path_charm"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "twindlingtweaks:soul_soil_path"
+  }
+}

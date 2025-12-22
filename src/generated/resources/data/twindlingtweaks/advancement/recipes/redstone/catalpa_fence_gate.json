@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_stripped_logs": {
+    "has_catalpa": {
       "conditions": {
         "items": [
           {
-            "items": "twindlingtweaks:stripped_catalpa_log"
+            "items": "twindlingtweaks:catalpa_planks"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "twindlingtweaks:catalpa_hanging_sign"
+        "recipe": "twindlingtweaks:catalpa_fence_gate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_stripped_logs"
+      "has_catalpa"
     ]
   ],
   "rewards": {
     "recipes": [
-      "twindlingtweaks:catalpa_hanging_sign"
+      "twindlingtweaks:catalpa_fence_gate"
     ]
   }
 }

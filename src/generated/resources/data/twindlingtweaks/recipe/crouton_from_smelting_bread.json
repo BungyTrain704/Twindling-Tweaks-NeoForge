@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 180,
+  "experience": 0.25,
+  "group": "salad_ingredients",
+  "ingredient": {
+    "item": "minecraft:bread"
+  },
+  "result": {
+    "count": 1,
+    "id": "twindlingtweaks:crouton"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "twindlingtweaks:filterer",
+  "id": "twindlingtweaks:pasteurizer_dummy_recipe",
+  "ingredients": [
+    {
+      "item": "twindlingtweaks:goat_milk"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "twindlingtweaks:goat_milk"
+  }
+}

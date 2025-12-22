@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "twindlingtweaks:reinforced_alluminite_ingot"
+    },
+    "B": {
+      "item": "twindlingtweaks:luminium_block"
+    },
+    "C": {
+      "item": "twindlingtweaks:red_dirt_charm"
+    },
+    "L": {
+      "item": "twindlingtweaks:reinforced_luminium_gem"
+    }
+  },
+  "pattern": [
+    "LBL",
+    "LCL",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "twindlingtweaks:combined_dirt_charm"
+  }
+}

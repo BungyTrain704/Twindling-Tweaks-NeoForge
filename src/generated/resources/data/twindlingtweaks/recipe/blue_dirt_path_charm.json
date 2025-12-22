@@ -1,0 +1,13 @@
+{
+  "type": "twindlingtweaks:filterer",
+  "id": "twindlingtweaks:blue_dirt_path_charm",
+  "ingredients": [
+    {
+      "item": "twindlingtweaks:blue_dirt_charm"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "twindlingtweaks:blue_dirt_path_charm"
+  }
+}

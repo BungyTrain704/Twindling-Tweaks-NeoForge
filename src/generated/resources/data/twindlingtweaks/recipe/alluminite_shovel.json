@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "twindlingtweaks:reinforced_alluminite_ingot"
+    },
+    "R": {
+      "item": "twindlingtweaks:alluminite_rod"
+    }
+  },
+  "pattern": [
+    "A",
+    "R",
+    "R"
+  ],
+  "result": {
+    "count": 1,
+    "id": "twindlingtweaks:alluminite_shovel"
+  }
+}

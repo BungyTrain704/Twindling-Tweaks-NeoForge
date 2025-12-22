@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/dirt_path",
+  "textures": {
+    "bottom": "twindlingtweaks:block/yellow_dirt",
+    "particle": "twindlingtweaks:block/yellow_dirt",
+    "side": "twindlingtweaks:block/yellow_dirt_path_side",
+    "top": "twindlingtweaks:block/yellow_dirt_path_top"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "twindlingtweaks:alluminite_nugget"
+    },
+    "L": {
+      "item": "twindlingtweaks:reinforced_luminium_gem"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "ALA",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "twindlingtweaks:disc_fragment_m"
+  }
+}

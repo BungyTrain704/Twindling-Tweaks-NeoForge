@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_crafting_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:crafting_table"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twindlingtweaks:dried_mud_block_from_blasting_mud_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_crafting_table"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twindlingtweaks:dried_mud_block_from_blasting_mud_block"
+    ]
+  }
+}

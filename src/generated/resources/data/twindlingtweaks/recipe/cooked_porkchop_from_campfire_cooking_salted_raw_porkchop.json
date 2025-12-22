@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 0.25,
+  "group": "salted_meats",
+  "ingredient": {
+    "item": "twindlingtweaks:salted_raw_porkchop"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:cooked_porkchop"
+  }
+}

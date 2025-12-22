@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "minecraft:egg"
+    },
+    "M": {
+      "item": "twindlingtweaks:goat_milk"
+    },
+    "S": {
+      "item": "twindlingtweaks:sugar_block"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "pattern": [
+    "MMM",
+    "SES",
+    "WWW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "twindlingtweaks:goat_cake"
+  }
+}

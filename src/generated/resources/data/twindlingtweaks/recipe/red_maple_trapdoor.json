@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "red_maple",
+  "key": {
+    "#": {
+      "item": "twindlingtweaks:red_maple_planks"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "twindlingtweaks:red_maple_trapdoor"
+  }
+}

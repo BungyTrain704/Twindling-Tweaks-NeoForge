@@ -1,0 +1,16 @@
+{
+  "type": "twindlingtweaks:crushing",
+  "id": "twindlingtweaks:potato_bits",
+  "ingredients": [
+    {
+      "tag": "twindlingtweaks:above_stone_hammers"
+    },
+    {
+      "item": "minecraft:baked_potato"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "twindlingtweaks:potato_bits"
+  }
+}

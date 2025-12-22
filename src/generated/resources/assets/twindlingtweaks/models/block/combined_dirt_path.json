@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/dirt_path",
+  "textures": {
+    "bottom": "twindlingtweaks:block/combined_dirt",
+    "particle": "twindlingtweaks:block/combined_dirt",
+    "side": "twindlingtweaks:block/combined_dirt_path_side",
+    "top": "twindlingtweaks:block/combined_dirt_path_top"
+  }
+}

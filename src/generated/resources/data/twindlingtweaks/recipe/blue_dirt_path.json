@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "twindlingtweaks:blue_dirt"
+    },
+    {
+      "item": "twindlingtweaks:blue_dirt_path_charm"
+    }
+  ],
+  "result": {
+    "count": 6,
+    "id": "twindlingtweaks:blue_dirt_path"
+  }
+}

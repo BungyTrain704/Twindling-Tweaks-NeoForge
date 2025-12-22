@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "twindlingtweaks:lettuce"
+    },
+    {
+      "item": "twindlingtweaks:toast"
+    },
+    {
+      "item": "twindlingtweaks:toast"
+    },
+    {
+      "item": "twindlingtweaks:ketchup_bottle"
+    },
+    {
+      "item": "minecraft:cooked_beef"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "twindlingtweaks:sl_sandwich_toasted"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "blocks",
+  "cookingtime": 80,
+  "experience": 0.25,
+  "group": "alluminite",
+  "ingredient": {
+    "item": "twindlingtweaks:raw_alluminite_block"
+  },
+  "result": {
+    "count": 1,
+    "id": "twindlingtweaks:alluminite_block"
+  }
+}
