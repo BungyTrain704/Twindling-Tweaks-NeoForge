@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "category": "blocks",
-  "cookingtime": 100,
+  "cookingtime": 900,
   "experience": 0.25,
   "group": "others",
   "ingredient": {

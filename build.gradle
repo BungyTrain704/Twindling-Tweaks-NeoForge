@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '2.0.116'
+    id 'net.neoforged.moddev' version '2.0.140'
     id 'idea'
 }
 
@@ -28,6 +28,7 @@ repositories {
         name = "ModMaven"
         url = "https://modmaven.dev"
     }
+    maven { url = 'https://maven.minecraftforge.net/' }
 }
 
 base {
@@ -132,6 +133,8 @@ dependencies {
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
     // The group id is ignored when searching -- in this case, it is "blank"
     // implementation "blank:coolmod-${mc_version}:${coolmod_version}"
+
+    implementation 'com.github.glitchfiend:TerraBlender-neoforge:1.21.1-4.1.0.8'
 
     // Example mod dependency using a file as dependency
     // implementation files("libs/coolmod-${mc_version}-${coolmod_version}.jar")

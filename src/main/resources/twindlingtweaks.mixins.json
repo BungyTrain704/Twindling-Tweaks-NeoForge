@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "com.austinplays.twindlingtweaks.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "VillagerFoodValuesMixin"
+  ],
+  "client": [
+  ],
+  "server": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

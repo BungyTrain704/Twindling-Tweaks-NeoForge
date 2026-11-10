@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_catalpa": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twindlingtweaks:catalpa_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twindlingtweaks:catalpa_sign"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_catalpa"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twindlingtweaks:catalpa_sign"
+    ]
+  }
+}

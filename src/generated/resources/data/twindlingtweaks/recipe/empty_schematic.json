@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "twindlingtweaks:alluminite_nugget"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "IDI",
+    "GAG",
+    "IDI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "twindlingtweaks:empty_schematic"
+  }
+}

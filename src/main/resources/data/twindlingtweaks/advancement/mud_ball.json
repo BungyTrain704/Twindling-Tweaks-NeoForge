@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "twindlingtweaks:mud_ball"
+    },
+    "title": "All Muddied Up",
+    "description": "Obtained a Mud Ball.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "twindlingtweaks:extras",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twindlingtweaks:mud_ball"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

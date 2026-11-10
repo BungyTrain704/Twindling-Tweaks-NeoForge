@@ -9,7 +9,7 @@
     "show_toast": true,
     "announce_to_chat": true
   },
-  "parent": "twindlingtweaks:extras",
+  "parent": "twindlingtweaks:mud_ball",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",

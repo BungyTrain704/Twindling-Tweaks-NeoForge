@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "twindlingtweaks:item/basic_dirt_path_charm"
-  }
-}

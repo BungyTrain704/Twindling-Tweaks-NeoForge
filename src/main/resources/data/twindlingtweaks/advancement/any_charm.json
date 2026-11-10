@@ -1,10 +1,10 @@
 {
   "display": {
     "icon": {
-      "id": "twindlingtweaks:basic_dirt_charm"
+      "id": "twindlingtweaks:basic_dirt_schematic"
     },
-    "title": "Let him cook... with Charms!",
-    "description": "Crafted any charm.",
+    "title": "Let him cook... with Schematics!",
+    "description": "Crafted any schematic.",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true
@@ -17,17 +17,17 @@
         "items": [
           {
             "items": [
-              "twindlingtweaks:basic_dirt_charm",
-              "twindlingtweaks:basic_dirt_path_charm",
-              "twindlingtweaks:advanced_dirt_path_charm",
-              "twindlingtweaks:blue_dirt_charm",
-              "twindlingtweaks:blue_dirt_path_charm",
-              "twindlingtweaks:red_dirt_charm",
-              "twindlingtweaks:red_dirt_path_charm",
-              "twindlingtweaks:yellow_dirt_charm",
-              "twindlingtweaks:yellow_dirt_path_charm",
-              "twindlingtweaks:combined_dirt_charm",
-              "twindlingtweaks:combined_dirt_path_charm"
+              "twindlingtweaks:basic_dirt_schematic",
+              "twindlingtweaks:basic_dirt_path_schematic",
+              "twindlingtweaks:advanced_dirt_path_schematic",
+              "twindlingtweaks:blue_dirt_schematic",
+              "twindlingtweaks:blue_dirt_path_schematic",
+              "twindlingtweaks:red_dirt_schematic",
+              "twindlingtweaks:red_dirt_path_schematic",
+              "twindlingtweaks:yellow_dirt_schematic",
+              "twindlingtweaks:yellow_dirt_path_schematic",
+              "twindlingtweaks:combined_dirt_schematic",
+              "twindlingtweaks:combined_dirt_path_schematic"
             ]
           }
         ]

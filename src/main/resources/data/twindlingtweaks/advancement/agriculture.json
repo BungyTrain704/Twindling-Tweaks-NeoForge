@@ -6,8 +6,8 @@
     "title": "A Start To Agriculture",
     "description": "The very beginning.",
     "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
+    "show_toast": false,
+    "announce_to_chat": false,
     "background": "twindlingtweaks:textures/block/dried_mud_block.png"
   },
   "criteria": {
@@ -17,9 +17,18 @@
         "items": [
           {
             "items": [
-              "twindlingtweaks:red_maple_log",
-              "twindlingtweaks:catalpa_log"
-
+              "minecraft:oak_log",
+              "minecraft:birch_log",
+              "minecraft:spruce_log",
+              "minecraft:jungle_log",
+              "minecraft:acacia_log",
+              "minecraft:cherry_log",
+              "minecraft:dark_oak_log",
+              "minecraft:mangrove_log",
+              "minecraft:crimson_stem",
+              "minecraft:warped_stem",
+              "twindlingtweaks:catalpa_log",
+              "twindlingtweaks:red_maple_log"
             ]
           }
         ]

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "twindlingtweaks:yellow_dirt_schematic"
+    },
+    "L": {
+      "item": "twindlingtweaks:reinforced_luminium_gem"
+    },
+    "N": {
+      "item": "minecraft:red_nether_bricks"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    }
+  },
+  "pattern": [
+    "RLR",
+    "NCN",
+    "RRR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "twindlingtweaks:red_dirt_schematic"
+  }
+}

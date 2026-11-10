@@ -1,0 +1,13 @@
+{
+  "type": "twindlingtweaks:filterer",
+  "id": "twindlingtweaks:red_dirt_path_schematic",
+  "ingredients": [
+    {
+      "item": "twindlingtweaks:red_dirt_schematic"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "twindlingtweaks:red_dirt_path_schematic"
+  }
+}

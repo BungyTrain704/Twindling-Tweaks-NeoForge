@@ -1,15 +1,15 @@
 {
   "display": {
     "icon": {
-      "id": "twindlingtweaks:empty_charm"
+      "id": "twindlingtweaks:empty_schematic"
     },
-    "title": "Charming, ain't it?",
-    "description": "Obtained an Empty Charm.",
+    "title": "Scheming",
+    "description": "Obtained an Empty Schematic.",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true
   },
-  "parent": "twindlingtweaks:alluminite",
+  "parent": "twindlingtweaks:alluminite_ingot",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",
@@ -17,7 +17,7 @@
         "items": [
           {
             "items": [
-              "twindlingtweaks:empty_charm"
+              "twindlingtweaks:empty_schematic"
             ]
           }
         ]

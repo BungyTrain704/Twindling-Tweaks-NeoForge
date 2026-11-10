@@ -1,13 +1,13 @@
 {
   "display": {
     "icon": {
-      "id": "twindlingtweaks:alluminite_ingot"
+      "id": "twindlingtweaks:raw_alluminite"
     },
     "title": "A Start To Ores!",
-    "description": "Obtained an Alluminite Ingot.",
+    "description": "Everything has a beginning.",
     "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
+    "show_toast": false,
+    "announce_to_chat": false,
     "background": "twindlingtweaks:textures/block/alluminite_block.png"
   },
   "criteria": {
@@ -17,7 +17,18 @@
         "items": [
           {
             "items": [
-              "twindlingtweaks:alluminite_ingot"
+              "minecraft:oak_log",
+              "minecraft:birch_log",
+              "minecraft:spruce_log",
+              "minecraft:jungle_log",
+              "minecraft:acacia_log",
+              "minecraft:cherry_log",
+              "minecraft:dark_oak_log",
+              "minecraft:mangrove_log",
+              "minecraft:crimson_stem",
+              "minecraft:warped_stem",
+              "twindlingtweaks:catalpa_log",
+              "twindlingtweaks:red_maple_log"
             ]
           }
         ]

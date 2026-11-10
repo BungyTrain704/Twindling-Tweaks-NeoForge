@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_features",
-  "biomes": "minecraft:plains",
+  "biomes": "twindlingtweaks:red_maple_forest",
   "features": "twindlingtweaks:red_maple_placed",
   "step": "vegetal_decoration"
 }

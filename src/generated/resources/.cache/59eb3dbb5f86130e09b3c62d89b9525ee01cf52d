@@ -1,4 +1,4 @@
-// 1.21.1	2025-12-05T21:58:01.7067833	Loot Tables
+// 1.21.1	2026-11-10T18:50:46.2761676	Loot Tables
 536c69468ddfa99acf41b3aa9f9b18e2344e9271 data/twindlingtweaks/loot_table/blocks/alluminite_block.json
 524df7fd41532ba3fb1c04af28dcf05af988b4fd data/twindlingtweaks/loot_table/blocks/alluminite_ore.json
 44dc98b0948bddc956d5f918577322ac3978e066 data/twindlingtweaks/loot_table/blocks/banana_leaves.json
@@ -35,7 +35,7 @@ ff4914ce3c8d1bf6b11d1619d6d3862008e7c76f data/twindlingtweaks/loot_table/blocks/
 df3231f73e9801b9ef8ba499067cf1a77a821d93 data/twindlingtweaks/loot_table/blocks/deepslate_alluminite_ore.json
 b14904ee4c186ef6658a55a352be363f39180eba data/twindlingtweaks/loot_table/blocks/deepslate_luminium_ore.json
 09bf48aec6a32c35dc173eaa5d7765e9efd1f753 data/twindlingtweaks/loot_table/blocks/deepslate_mud_ore.json
-7de62f65a9afb927b95549c568fa28399ddf764b data/twindlingtweaks/loot_table/blocks/deepslate_salt_ore.json
+06b7ac2620b638f7cae73ee6d654ecfa2dfac161 data/twindlingtweaks/loot_table/blocks/deepslate_salt_ore.json
 a03b39b0f278d71afcb131025c49554dfd374d95 data/twindlingtweaks/loot_table/blocks/deepslate_sugar_ore.json
 0f6dda7a55d5ea275cc040c192f4ddfcfef85b12 data/twindlingtweaks/loot_table/blocks/dried_mud_block.json
 b432d2fa1d3aa436c436bcb8b3a3e30a54370410 data/twindlingtweaks/loot_table/blocks/fiery_farmland.json
