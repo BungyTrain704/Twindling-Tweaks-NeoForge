@@ -16,7 +16,7 @@ public class ModChestBoatEntity2 extends ChestBoat {
     private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(ModChestBoatEntity2.class, EntityDataSerializers.INT);
 
     public ModChestBoatEntity2(EntityType<? extends ChestBoat> pEntityType, Level pLevel) {
-        super(pEntityType, pLevel);
+        super(pEntityType, pLevel, ModItems.RED_MAPLE_CHEST_BOAT);
     }
 
     public ModChestBoatEntity2(Level pLevel, double pX, double pY, double pZ) {
@@ -25,16 +25,6 @@ public class ModChestBoatEntity2 extends ChestBoat {
         this.xo = pX;
         this.yo = pY;
         this.zo = pZ;
-    }
-
-    @Override
-    public Item getDropItem() {
-        switch (getModVariant()) {
-            case RED_MAPLE -> {
-                return ModItems.RED_MAPLE_CHEST_BOAT.get();
-            }
-        }
-        return super.getDropItem();
     }
 
     public void setVariant(ModBoatEntity2.Type pVariant) {

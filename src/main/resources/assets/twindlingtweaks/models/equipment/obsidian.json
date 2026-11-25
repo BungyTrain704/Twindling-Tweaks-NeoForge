@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "twindlingtweaks:obsidian"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "twindlingtweaks:obsidian"
+      }
+    ]
+  }
+}

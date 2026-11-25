@@ -5,6 +5,8 @@ import com.austinplays.twindlingtweaks.block.entity.ModBlockEntities;
 import com.austinplays.twindlingtweaks.block.entity.ModEntities;
 import com.austinplays.twindlingtweaks.entity.client.renderers.boat.ModBoatRenderer;
 import com.austinplays.twindlingtweaks.entity.client.renderers.boat.ModBoatRenderer2;
+import com.austinplays.twindlingtweaks.entity.client.renderers.boat.ModChestBoatRenderer;
+import com.austinplays.twindlingtweaks.entity.client.renderers.boat.ModChestBoatRenderer2;
 import com.austinplays.twindlingtweaks.entity.client.renderers.throwable.MudBallProjectileRenderer;
 import com.austinplays.twindlingtweaks.item.ModItems;
 import com.austinplays.twindlingtweaks.item.custom.tabs.ModCreativeModeTab;
@@ -91,11 +93,25 @@ public class TwindlingTweaks {
             Sheets.addWoodType(ModWoodTypes.RED_MAPLE);
             Sheets.addWoodType(ModWoodTypes.CATALPA);
 
-            EntityRenderers.register(ModEntities.MOD_BOAT.value(), pContext -> new ModBoatRenderer(pContext, false));
-            EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.value(), pContext -> new ModBoatRenderer(pContext, true));
+            EntityRenderers.register(
+                    ModEntities.MOD_BOAT.value(),
+                    ModBoatRenderer::new
+            );
 
-            EntityRenderers.register(ModEntities.MOD_BOAT_2.value(), pContext -> new ModBoatRenderer2(pContext, false));
-            EntityRenderers.register(ModEntities.MOD_CHEST_BOAT_2.value(), pContext -> new ModBoatRenderer2(pContext, true));
+            EntityRenderers.register(
+                    ModEntities.MOD_CHEST_BOAT.value(),
+                    ModChestBoatRenderer::new
+            );
+
+            EntityRenderers.register(
+                    ModEntities.MOD_BOAT_2.value(),
+                    ModBoatRenderer2::new
+            );
+
+            EntityRenderers.register(
+                    ModEntities.MOD_CHEST_BOAT_2.value(),
+                    ModChestBoatRenderer2::new
+            );
 
             EntityRenderers.register(ModEntities.MUD_BALL.value(), MudBallProjectileRenderer::new);
 

@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "twindlingtweaks:alluminite"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "twindlingtweaks:alluminite"
+      }
+    ]
+  }
+}

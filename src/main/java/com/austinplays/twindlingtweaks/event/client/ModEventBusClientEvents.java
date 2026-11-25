@@ -4,7 +4,6 @@ import com.austinplays.twindlingtweaks.TwindlingTweaks;
 import com.austinplays.twindlingtweaks.block.entity.ModBlockEntities;
 import com.austinplays.twindlingtweaks.entity.client.ModModelLayers;
 import net.minecraft.client.model.BoatModel;
-import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.neoforged.api.distmarker.Dist;
@@ -17,10 +16,10 @@ public class ModEventBusClientEvents {
 
     @SubscribeEvent
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
-        event.registerLayerDefinition(ModModelLayers.CATALPA_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.CATALPA_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.RED_MAPLE_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.RED_MAPLE_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+        event.registerLayerDefinition(ModModelLayers.CATALPA_BOAT_LAYER, BoatModel::createBoatModel);
+        event.registerLayerDefinition(ModModelLayers.CATALPA_CHEST_BOAT_LAYER, BoatModel::createChestBoatModel);
+        event.registerLayerDefinition(ModModelLayers.RED_MAPLE_BOAT_LAYER, BoatModel::createBoatModel);
+        event.registerLayerDefinition(ModModelLayers.RED_MAPLE_CHEST_BOAT_LAYER,BoatModel::createChestBoatModel);
     }
 
     @SubscribeEvent

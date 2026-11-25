@@ -11,10 +11,7 @@ import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.Recipe;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 
 import java.util.ArrayList;
@@ -52,17 +49,6 @@ public class CrusherRecipe implements Recipe<CrusherRecipeInput> {
         return output.copy();
     }
 
-    @Override
-    public boolean canCraftInDimensions(int w, int h) {
-        return true;
-    }
-
-    @Override
-    public ItemStack getResultItem(HolderLookup.Provider provider) {
-        return output.copy();
-    }
-
-    @Override
     public NonNullList<Ingredient> getIngredients() {
         return ingredients;
     }
@@ -79,13 +65,23 @@ public class CrusherRecipe implements Recipe<CrusherRecipeInput> {
     // Type + Serializer
     // -------------------------
     @Override
-    public RecipeSerializer<?> getSerializer() {
+    public RecipeSerializer<? extends Recipe<CrusherRecipeInput>> getSerializer() {
         return ModRecipes.CRUSHING_SERIALIZER.get();
     }
 
     @Override
-    public RecipeType<?> getType() {
+    public RecipeType<? extends Recipe<CrusherRecipeInput>> getType() {
         return TYPE;
+    }
+
+    @Override
+    public PlacementInfo placementInfo() {
+        return PlacementInfo.create(ingredients);
+    }
+
+    @Override
+    public RecipeBookCategory recipeBookCategory() {
+        return RecipeBookCategories.CRAFTING_MISC;
     }
 
     public static class Serializer implements RecipeSerializer<CrusherRecipe> {

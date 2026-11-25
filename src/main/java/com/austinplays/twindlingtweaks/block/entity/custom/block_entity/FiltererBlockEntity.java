@@ -189,7 +189,7 @@ public class FiltererBlockEntity extends BlockEntity {
         FiltererRecipeInput input = new FiltererRecipeInput(inv);
 
         assert level != null;
-        java.util.Optional<FiltererRecipe> match = level.getRecipeManager()
+        java.util.Optional<FiltererRecipe> match = ((ServerLevel) level).recipeAccess()
                 .getRecipeFor(FiltererRecipe.TYPE, input, level)
                 .map(RecipeHolder::value);
 
@@ -197,7 +197,7 @@ public class FiltererBlockEntity extends BlockEntity {
                 && canInsertAmountIntoOutputSlot(entity.itemHandler)
                 && canInsertItemIntoOutputSlot(
                 entity.itemHandler,
-                match.get().getResultItem(level.registryAccess())
+                match.get().getOutput()
         );
     }
 
@@ -206,17 +206,19 @@ public class FiltererBlockEntity extends BlockEntity {
         SimpleContainer inv = new SimpleContainer(entity.itemHandler.getStackInSlot(0));
         FiltererRecipeInput input = new FiltererRecipeInput(inv);
 
-        Optional<FiltererRecipe> match = level.getRecipeManager()
+        Optional<FiltererRecipe> match = ((ServerLevel) level).recipeAccess()
                 .getRecipeFor(FiltererRecipe.TYPE, input, level)
                 .map(RecipeHolder::value);
 
         if (match.isPresent()) {
             entity.itemHandler.extractItem(0, 1, false);
-            entity.itemHandler.setStackInSlot(1,
-                    new ItemStack(match.get().getResultItem(level.registryAccess()).getItem(),
-                            entity.itemHandler.getStackInSlot(1).getCount() + 1)
+            entity.itemHandler.setStackInSlot(
+                    1,
+                    new ItemStack(
+                            match.get().getOutput().getItem(),
+                            entity.itemHandler.getStackInSlot(1).getCount() + 1
+                    )
             );
-            entity.resetProgress();
         }
     }
 

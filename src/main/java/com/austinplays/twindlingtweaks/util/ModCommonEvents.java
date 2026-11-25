@@ -47,6 +47,6 @@ public class ModCommonEvents {
 
         // Cancel the original milk interaction
         event.setCanceled(true);
-        event.setCancellationResult(InteractionResult.sidedSuccess(level.isClientSide()));
+        event.setCancellationResult(InteractionResult.SUCCESS);
     }
 }

@@ -9,10 +9,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -49,14 +46,31 @@ public class ModDirtPathBlock3 extends Block {
 
     @Override
     protected BlockState updateShape(
-            BlockState p_153152_, Direction p_153153_, BlockState p_153154_, LevelAccessor p_153155_, BlockPos p_153156_, BlockPos p_153157_
+            BlockState state,
+            LevelReader level,
+            ScheduledTickAccess scheduledTickAccess,
+            BlockPos pos,
+            Direction direction,
+            BlockPos neighborPos,
+            BlockState neighborState,
+            RandomSource random
     ) {
-        if (p_153153_ == Direction.UP && !p_153152_.canSurvive(p_153155_, p_153156_)) {
-            p_153155_.scheduleTick(p_153156_, this, 1);
+        if (direction == Direction.UP && !state.canSurvive(level, pos)) {
+            scheduledTickAccess.scheduleTick(pos, this, 1);
         }
 
-        return super.updateShape(p_153152_, p_153153_, p_153154_, p_153155_, p_153156_, p_153157_);
+        return super.updateShape(
+                state,
+                level,
+                scheduledTickAccess,
+                pos,
+                direction,
+                neighborPos,
+                neighborState,
+                random
+        );
     }
+
 
     @Override
     protected void tick(BlockState p_221070_, ServerLevel p_221071_, BlockPos p_221072_, RandomSource p_221073_) {

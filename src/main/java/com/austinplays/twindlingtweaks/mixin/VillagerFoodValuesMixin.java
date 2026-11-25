@@ -3,10 +3,7 @@ package com.austinplays.twindlingtweaks.mixin;
 import com.austinplays.twindlingtweaks.item.ModItems;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.item.Item;
-import org.spongepowered.asm.mixin.Final;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Mutable;
-import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -22,7 +19,8 @@ public abstract class VillagerFoodValuesMixin {
     @Shadow @Final @Mutable
     private static Map<Item, Integer> FOOD_POINTS;
 
-    @Shadow @Final @Mutable
+    @Unique
+    @Final @Mutable
     private static Set<Item> WANTED_ITEMS;
 
     @Inject(method = "<clinit>", at = @At("TAIL"))

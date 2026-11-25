@@ -1,21 +1,14 @@
 package com.austinplays.twindlingtweaks.item.custom.armor.tiers;
 
-import com.austinplays.twindlingtweaks.block.ModBlocks;
-import com.austinplays.twindlingtweaks.item.ModItems;
 import com.austinplays.twindlingtweaks.util.ModTags;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.neoforged.neoforge.common.SimpleTier;
+import net.minecraft.world.item.ToolMaterial;
 
 public class ModTiers {
-    public static final Tier ALLUMINITE = new SimpleTier(
+    public static final ToolMaterial ALLUMINITE = new ToolMaterial(
             ModTags.Blocks.INCORRECT_FOR_ALLUMINITE_TOOL, 1500, 8.4f, 0, 15,
-            () -> Ingredient.of(ModItems.REINFORCED_ALLUMINITE_INGOT.get())
-    ) {
-    };
+            ModTags.Items.ALLUMINITE_REPAIRABLE);
 
-    public static final Tier OBSIDIAN = new SimpleTier(
+    public static final ToolMaterial OBSIDIAN = new ToolMaterial(
             ModTags.Blocks.INCORRECT_FOR_OBSIDIAN_TOOL, 3000, 10f, 0, 30,
-            () -> Ingredient.of(ModBlocks.REINFORCED_OBSIDIAN.get())
-    );
+            ModTags.Items.OBSIDIAN_REPAIRABLE);
 }

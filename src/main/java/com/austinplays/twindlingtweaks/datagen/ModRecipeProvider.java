@@ -8,32 +8,51 @@ import com.austinplays.twindlingtweaks.datagen.builder.PasteurizerRecipeBuilder;
 import com.austinplays.twindlingtweaks.item.ModItems;
 import com.austinplays.twindlingtweaks.item.custom.tags.ModTags;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.*;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.Item;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
-import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredItem;
 
-import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 import static com.austinplays.twindlingtweaks.TwindlingTweaks.MOD_ID;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
 
-    public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
-        super(output, lookupProvider);
+    public ModRecipeProvider(HolderLookup.Provider provider, RecipeOutput recipeOutput) {
+        super(provider, recipeOutput);
     }
 
+    public static class Runner extends RecipeProvider.Runner {
+        public Runner(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> provider) {
+            super(packOutput, provider);
+        }
+
+        @Override
+        protected RecipeProvider createRecipeProvider(HolderLookup.Provider provider, RecipeOutput recipeOutput) {
+            return new ModRecipeProvider(provider, recipeOutput);
+        }
+
+        @Override
+        public String getName() {
+            return "My Recipes";
+        }
+    }
+
+
     @Override
-    protected void buildRecipes(RecipeOutput output) {
+    protected void buildRecipes() {
         generateVanillaCraftingRecipes(output);
         generateVanillaSmeltingRecipes(output);
         generateFiltererRecipes(output);
@@ -43,7 +62,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     private void generateVanillaCraftingRecipes(RecipeOutput output) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.EMPTY_SCHEMATIC.get())
+        shaped(RecipeCategory.MISC, ModItems.EMPTY_SCHEMATIC.get())
                 .pattern("IDI")
                 .pattern("GAG")
                 .pattern("IDI")
@@ -54,7 +73,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ADVANCED_DIRT_PATH_SCHEMATIC.get())
+        shaped(RecipeCategory.MISC, ModItems.ADVANCED_DIRT_PATH_SCHEMATIC.get())
                 .pattern("LLL")
                 .pattern("LCL")
                 .pattern("LLL")
@@ -63,7 +82,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BASIC_DIRT_SCHEMATIC.get())
+        shaped(RecipeCategory.MISC, ModItems.BASIC_DIRT_SCHEMATIC.get())
                 .pattern("DMD")
                 .pattern("RCR")
                 .pattern("DMD")
@@ -74,7 +93,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLUE_DIRT_SCHEMATIC.get())
+        shaped(RecipeCategory.MISC, ModItems.BLUE_DIRT_SCHEMATIC.get())
                 .pattern("LLL")
                 .pattern("DCD")
                 .pattern("AAA")
@@ -85,7 +104,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.YELLOW_DIRT_SCHEMATIC.get())
+        shaped(RecipeCategory.MISC, ModItems.YELLOW_DIRT_SCHEMATIC.get())
                 .pattern("AHA")
                 .pattern("PCB")
                 .pattern("GLG")
@@ -99,7 +118,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RED_DIRT_SCHEMATIC.get())
+        shaped(RecipeCategory.MISC, ModItems.RED_DIRT_SCHEMATIC.get())
                 .pattern("RLR")
                 .pattern("NCN")
                 .pattern("RRR")
@@ -110,7 +129,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALLUMIN_LUMINIUM_DIRT_SCHEMATIC.get())
+        shaped(RecipeCategory.MISC, ModItems.ALLUMIN_LUMINIUM_DIRT_SCHEMATIC.get())
                 .pattern("LBL")
                 .pattern("LCL")
                 .pattern("AAA")
@@ -121,7 +140,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.STONE_HAMMER.get())
+        shaped(RecipeCategory.TOOLS, ModItems.STONE_HAMMER.get())
                 .pattern("RRR")
                 .pattern("RSR")
                 .pattern(" S ")
@@ -130,7 +149,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.IRON_HAMMER.get())
+        shaped(RecipeCategory.TOOLS, ModItems.IRON_HAMMER.get())
                 .pattern("III")
                 .pattern("ISI")
                 .pattern(" S ")
@@ -139,7 +158,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.DIAMOND_HAMMER.get())
+        shaped(RecipeCategory.TOOLS, ModItems.DIAMOND_HAMMER.get())
                 .pattern("DDD")
                 .pattern("DSD")
                 .pattern(" S ")
@@ -148,7 +167,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.OBSIDIAN_HAMMER.get())
+        shaped(RecipeCategory.TOOLS, ModItems.OBSIDIAN_HAMMER.get())
                 .pattern("UUU")
                 .pattern("RAR")
                 .pattern(" A ")
@@ -158,7 +177,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, Items.ENCHANTED_GOLDEN_APPLE)
+        shaped(RecipeCategory.FOOD, Items.ENCHANTED_GOLDEN_APPLE)
                 .pattern("GGG")
                 .pattern("GAG")
                 .pattern("GGG")
@@ -167,7 +186,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.LUMINIUM_APPLE.get())
+        shaped(RecipeCategory.FOOD, ModItems.LUMINIUM_APPLE.get())
                 .pattern("###")
                 .pattern("#-#")
                 .pattern("###")
@@ -176,18 +195,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.LIGHT_GRAY_DYE)
+        shapeless(RecipeCategory.MISC, Items.LIGHT_GRAY_DYE)
                 .requires(ModBlocks.CATALPA_FLOWERS.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ORANGE_SEED_MILK.get())
+        shapeless(RecipeCategory.MISC, ModItems.ORANGE_SEED_MILK.get())
                 .requires(ModItems.ORANGE_SEED_POWDER.get())
                 .requires(Items.MILK_BUCKET)
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.IRON_INFUSED_MILK.get())
+        shaped(RecipeCategory.FOOD, ModItems.IRON_INFUSED_MILK.get())
                 .pattern("III")
                 .pattern("IMI")
                 .pattern("III")
@@ -196,7 +215,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.DIAMOND_INFUSED_MILK.get())
+        shaped(RecipeCategory.FOOD, ModItems.DIAMOND_INFUSED_MILK.get())
                 .pattern("DDD")
                 .pattern("DMD")
                 .pattern("DDD")
@@ -205,7 +224,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ALLUMINITE_SWORD.get())
+        shaped(RecipeCategory.COMBAT, ModItems.ALLUMINITE_SWORD.get())
                 .pattern("A")
                 .pattern("A")
                 .pattern("R")
@@ -214,7 +233,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALLUMINITE_AXE.get())
+        shaped(RecipeCategory.TOOLS, ModItems.ALLUMINITE_AXE.get())
                 .pattern("AA")
                 .pattern("AR")
                 .pattern(" R")
@@ -223,7 +242,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALLUMINITE_PICKAXE.get())
+        shaped(RecipeCategory.TOOLS, ModItems.ALLUMINITE_PICKAXE.get())
                 .pattern("AAA")
                 .pattern(" R ")
                 .pattern(" R ")
@@ -232,7 +251,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALLUMINITE_SHOVEL.get())
+        shaped(RecipeCategory.TOOLS, ModItems.ALLUMINITE_SHOVEL.get())
                 .pattern("A")
                 .pattern("R")
                 .pattern("R")
@@ -241,7 +260,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALLUMINITE_HOE.get())
+        shaped(RecipeCategory.TOOLS, ModItems.ALLUMINITE_HOE.get())
                 .pattern("AA")
                 .pattern(" R")
                 .pattern(" R")
@@ -250,7 +269,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.OBSIDIAN_SWORD.get())
+        shaped(RecipeCategory.COMBAT, ModItems.OBSIDIAN_SWORD.get())
                 .pattern("A")
                 .pattern("A")
                 .pattern("R")
@@ -259,7 +278,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.OBSIDIAN_AXE.get())
+        shaped(RecipeCategory.TOOLS, ModItems.OBSIDIAN_AXE.get())
                 .pattern("AA")
                 .pattern("AR")
                 .pattern(" R")
@@ -268,7 +287,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.OBSIDIAN_PICKAXE.get())
+        shaped(RecipeCategory.TOOLS, ModItems.OBSIDIAN_PICKAXE.get())
                 .pattern("AAA")
                 .pattern(" R ")
                 .pattern(" R ")
@@ -277,7 +296,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.OBSIDIAN_SHOVEL.get())
+        shaped(RecipeCategory.TOOLS, ModItems.OBSIDIAN_SHOVEL.get())
                 .pattern("A")
                 .pattern("R")
                 .pattern("R")
@@ -286,7 +305,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.OBSIDIAN_HOE.get())
+        shaped(RecipeCategory.TOOLS, ModItems.OBSIDIAN_HOE.get())
                 .pattern("AA")
                 .pattern(" R")
                 .pattern(" R")
@@ -295,7 +314,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.REINFORCED_ALLUMINITE_INGOT.get(), 2)
+        shaped(RecipeCategory.MISC, ModItems.REINFORCED_ALLUMINITE_INGOT.get(), 2)
                 .pattern("IAI")
                 .pattern("AAA")
                 .pattern("IAI")
@@ -304,7 +323,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALLUMINITE_ROD.get(), 2)
+        shaped(RecipeCategory.MISC, ModItems.ALLUMINITE_ROD.get(), 2)
                 .pattern("AAA")
                 .pattern("RSR")
                 .pattern("AAA")
@@ -314,7 +333,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALLUMINITE_ROD_SHARD.get(), 3)
+        shaped(RecipeCategory.MISC, ModItems.ALLUMINITE_ROD_SHARD.get(), 3)
                 .pattern("III")
                 .pattern("ISA")
                 .pattern("AAA")
@@ -324,7 +343,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.COOKING_KNIFE.get())
+        shaped(RecipeCategory.TOOLS, ModItems.COOKING_KNIFE.get())
                 .pattern("I  ")
                 .pattern(" I ")
                 .pattern("  S")
@@ -333,7 +352,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MYSTICAL_DISC_FRAGMENT.get())
+        shaped(RecipeCategory.MISC, ModItems.MYSTICAL_DISC_FRAGMENT.get())
                 .pattern("AAA")
                 .pattern("ALA")
                 .pattern("AAA")
@@ -342,12 +361,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MYSTICAL_MUSIC_DISC.get())
+        shapeless(RecipeCategory.MISC, ModItems.MYSTICAL_MUSIC_DISC.get())
                 .requires(ModItems.MYSTICAL_DISC_FRAGMENT.get(), 8)
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MUD_DOOR.get(), 3)
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MUD_DOOR.get(), 3)
                 .pattern("DD")
                 .pattern("MM")
                 .pattern("DD")
@@ -356,7 +375,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MUD_TRAPDOOR.get(), 3)
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MUD_TRAPDOOR.get(), 3)
                 .pattern("DMD")
                 .pattern("DMD")
                 .define('D', ModItems.DRIED_MUD_BALL.get())
@@ -375,10 +394,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         nineBlockStorageRecipes(output, ModBlocks.SUGAR_BLOCK.get(), Items.SUGAR);
         nineBlockStorageRecipes(output, ModBlocks.UNFILTERED_SUGAR_BLOCK.get(), ModItems.UNFILTERED_SUGAR.get());
 
-        twoByTwoPacker(output, RecipeCategory.MISC, ModBlocks.MUD_BLOCK.get(), ModItems.MUD_BALL.get());
-        twoByTwoPacker(output, RecipeCategory.MISC, ModBlocks.DRIED_MUD_BLOCK.get(), ModItems.DRIED_MUD_BALL.get());
+        twoByTwoPacker(RecipeCategory.MISC, ModBlocks.MUD_BLOCK.get(), ModItems.MUD_BALL.get());
+        twoByTwoPacker(RecipeCategory.MISC, ModBlocks.DRIED_MUD_BLOCK.get(), ModItems.DRIED_MUD_BALL.get());
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RAW_LUMINIUM.get())
+        shaped(RecipeCategory.MISC, ModItems.RAW_LUMINIUM.get())
                 .pattern("ADA")
                 .pattern("LLL")
                 .pattern("ALA")
@@ -388,7 +407,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.UNSTABLE_ALLUMINITE_INGOT.get())
+        shaped(RecipeCategory.MISC, ModItems.UNSTABLE_ALLUMINITE_INGOT.get())
                 .pattern("LOL")
                 .pattern("ORO")
                 .pattern("LOL")
@@ -398,7 +417,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALLUMINITE_INGOT.get())
+        shaped(RecipeCategory.MISC, ModItems.ALLUMINITE_INGOT.get())
                 .pattern("AAA")
                 .pattern("AAA")
                 .pattern("AAA")
@@ -406,66 +425,66 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ALLUMINITE_NUGGET.get(), 9)
+        shapeless(RecipeCategory.MISC, ModItems.ALLUMINITE_NUGGET.get(), 9)
                 .requires(ModItems.ALLUMINITE_INGOT.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_DIRT_PATH.get(), 6)
+        shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_DIRT_PATH.get(), 6)
                 .requires(ModBlocks.BLUE_DIRT.get())
                 .requires(ModItems.BLUE_DIRT_PATH_SCHEMATIC.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_DIRT_PATH.get(), 6)
+        shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_DIRT_PATH.get(), 6)
                 .requires(ModBlocks.YELLOW_DIRT.get())
                 .requires(ModItems.YELLOW_DIRT_PATH_SCHEMATIC.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_DIRT_PATH.get(), 6)
+        shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_DIRT_PATH.get(), 6)
                 .requires(ModBlocks.RED_DIRT.get())
                 .requires(ModItems.RED_DIRT_PATH_SCHEMATIC.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ALLUMIN_LUMINIUM_DIRT_PATH.get(), 12)
+        shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ALLUMIN_LUMINIUM_DIRT_PATH.get(), 12)
                 .requires(ModBlocks.ALLUMIN_LUMINIUM_DIRT.get())
                 .requires(ModItems.ALLUMIN_LUMINIUM_DIRT_PATH_SCHEMATIC.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COARSE_DIRT_PATH.get(), 6)
+        shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COARSE_DIRT_PATH.get(), 6)
                 .requires(Blocks.COARSE_DIRT, 3)
                 .requires(ModItems.BASIC_DIRT_PATH_SCHEMATIC.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROOTED_DIRT_PATH.get(), 6)
+        shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROOTED_DIRT_PATH.get(), 6)
                 .requires(Blocks.ROOTED_DIRT, 3)
                 .requires(ModItems.BASIC_DIRT_PATH_SCHEMATIC.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOUL_SAND_PATH.get(), 9)
+        shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOUL_SAND_PATH.get(), 9)
                 .requires(Blocks.SOUL_SAND, 3)
                 .requires(ModItems.ADVANCED_DIRT_PATH_SCHEMATIC.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOUL_SOIL_PATH.get(), 9)
+        shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOUL_SOIL_PATH.get(), 9)
                 .requires(Blocks.SOUL_SOIL, 3)
                 .requires(ModItems.ADVANCED_DIRT_PATH_SCHEMATIC.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, Blocks.DIRT_PATH, 6)
+        shapeless(RecipeCategory.BUILDING_BLOCKS, Blocks.DIRT_PATH, 6)
                 .requires(Blocks.DIRT, 3)
                 .requires(ModItems.BASIC_DIRT_PATH_SCHEMATIC.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_DIRT.get(), 4)
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_DIRT.get(), 4)
                 .pattern(" A ")
                 .pattern("DCD")
                 .pattern(" A ")
@@ -475,7 +494,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SPEEDY_FARMLAND.get())
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SPEEDY_FARMLAND.get())
                 .pattern(" A ")
                 .pattern("RBR")
                 .pattern(" R ")
@@ -485,7 +504,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_DIRT.get(), 4)
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_DIRT.get(), 4)
                 .pattern(" B ")
                 .pattern("ICI")
                 .pattern(" B ")
@@ -495,7 +514,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FLASH_FARMLAND.get())
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FLASH_FARMLAND.get())
                 .pattern(" I ")
                 .pattern("GYG")
                 .pattern(" G ")
@@ -505,7 +524,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_DIRT.get(), 4)
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_DIRT.get(), 4)
                 .pattern(" B ")
                 .pattern("BCB")
                 .pattern(" B ")
@@ -514,7 +533,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIERY_FARMLAND.get())
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIERY_FARMLAND.get())
                 .pattern(" R ")
                 .pattern("NDN")
                 .pattern(" R ")
@@ -524,7 +543,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ALLUMIN_LUMINIUM_DIRT.get(), 6)
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ALLUMIN_LUMINIUM_DIRT.get(), 6)
                 .pattern(" R ")
                 .pattern("BCB")
                 .pattern(" R ")
@@ -534,7 +553,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TWINDLING_TWEAKS_FARMLAND.get())
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TWINDLING_TWEAKS_FARMLAND.get())
                 .pattern(" A ")
                 .pattern("LDL")
                 .pattern(" A ")
@@ -544,7 +563,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OBSIDIAN_FORGER.get())
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OBSIDIAN_FORGER.get())
                 .pattern("OCO")
                 .pattern("CDC")
                 .pattern("OCO")
@@ -554,7 +573,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FILTERER.get())
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FILTERER.get())
                 .pattern("IPI")
                 .pattern("PAP")
                 .pattern("IPI")
@@ -564,7 +583,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRUSHER.get())
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRUSHER.get())
                 .pattern("IOI")
                 .pattern("GAG")
                 .pattern("IOI")
@@ -575,7 +594,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PASTEURIZER.get())
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PASTEURIZER.get())
                 .pattern("RHR")
                 .pattern("HCH")
                 .pattern("RCR")
@@ -585,13 +604,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.FRIED_EGG.get())
+        shapeless(RecipeCategory.FOOD, ModItems.FRIED_EGG.get())
                 .requires(Items.EGG)
                 .requires(ModItems.VEGETABLE_OIL.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.STEAK_LETTUCE_SANDWICH.get())
+        shapeless(RecipeCategory.FOOD, ModItems.STEAK_LETTUCE_SANDWICH.get())
                 .requires(ModItems.LETTUCE.get())
                 .requires(ModItems.BREAD_SLICE.get(), 2)
                 .requires(ModItems.KETCHUP_BOTTLE.get())
@@ -599,7 +618,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.TOASTED_STEAK_LETTUCE_SANDWICH.get())
+        shapeless(RecipeCategory.FOOD, ModItems.TOASTED_STEAK_LETTUCE_SANDWICH.get())
                 .requires(ModItems.LETTUCE.get())
                 .requires(ModItems.TOAST.get(), 2)
                 .requires(ModItems.KETCHUP_BOTTLE.get())
@@ -607,7 +626,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.VEGAN_SANDWICH.get())
+        shapeless(RecipeCategory.FOOD, ModItems.VEGAN_SANDWICH.get())
                 .requires(ModItems.LETTUCE.get())
                 .requires(ModItems.BREAD_SLICE.get(), 2)
                 .requires(ModItems.KETCHUP_BOTTLE.get())
@@ -615,14 +634,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BANANA_SANDWICH.get())
+        shapeless(RecipeCategory.FOOD, ModItems.BANANA_SANDWICH.get())
                 .requires(ModItems.BANANA.get(), 2)
                 .requires(ModItems.BREAD_SLICE.get(), 2)
                 .requires(ModItems.GOAT_BUTTER.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.CHEESE_MEAT_SANDWICH.get())
+        shapeless(RecipeCategory.FOOD, ModItems.CHEESE_MEAT_SANDWICH.get())
                 .requires(ModItems.GOAT_CHEESE.get())
                 .requires(ModItems.BREAD_SLICE.get(), 2)
                 .requires(ModItems.GOAT_BUTTER.get())
@@ -630,7 +649,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.MEATY_SANDWICH.get())
+        shapeless(RecipeCategory.FOOD, ModItems.MEATY_SANDWICH.get())
                 .requires(Items.COOKED_PORKCHOP)
                 .requires(ModItems.BREAD_SLICE.get(), 2)
                 .requires(ModItems.KETCHUP_BOTTLE.get())
@@ -638,7 +657,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.GOAT_CAKE_ITEM.get())
+        shaped(RecipeCategory.FOOD, ModItems.GOAT_CAKE_ITEM.get())
                 .pattern("MMM")
                 .pattern("SES")
                 .pattern("WWW")
@@ -649,7 +668,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.SALTED_POTATO_CHIPS.get())
+        shaped(RecipeCategory.FOOD, ModItems.SALTED_POTATO_CHIPS.get())
                 .pattern(" S ")
                 .pattern("SPS")
                 .pattern(" S ")
@@ -658,7 +677,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SALAD_TOPPINGS.get())
+        shapeless(RecipeCategory.FOOD, ModItems.SALAD_TOPPINGS.get())
                 .requires(ModItems.LETTUCE.get())
                 .requires(ModItems.TOMATO.get())
                 .requires(ModItems.CUCUMBER.get())
@@ -666,14 +685,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SALAD.get())
+        shapeless(RecipeCategory.FOOD, ModItems.SALAD.get())
                 .requires(Items.BOWL)
                 .requires(ModItems.SALAD_TOPPINGS.get())
                 .requires(ModItems.RANCH_BOTTLE.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SPECIAL_SALAD_TOPPINGS.get())
+        shapeless(RecipeCategory.FOOD, ModItems.SPECIAL_SALAD_TOPPINGS.get())
                 .requires(ModItems.LETTUCE.get())
                 .requires(ModItems.TOMATO.get())
                 .requires(ModItems.ORANGE.get())
@@ -682,14 +701,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SPECIAL_SALAD.get())
+        shapeless(RecipeCategory.FOOD, ModItems.SPECIAL_SALAD.get())
                 .requires(Items.BOWL)
                 .requires(ModItems.SPECIAL_SALAD_TOPPINGS.get())
                 .requires(ModItems.RANCH_BOTTLE.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SPRING_SALAD_TOPPINGS.get())
+        shapeless(RecipeCategory.FOOD, ModItems.SPRING_SALAD_TOPPINGS.get())
                 .requires(ModItems.LETTUCE.get())
                 .requires(ModItems.CROUTON.get())
                 .requires(ModItems.TOMATO.get())
@@ -701,14 +720,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SPRING_SALAD.get())
+        shapeless(RecipeCategory.FOOD, ModItems.SPRING_SALAD.get())
                 .requires(Items.BOWL)
                 .requires(ModItems.SPRING_SALAD_TOPPINGS.get())
                 .requires(ModItems.RANCH_BOTTLE.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.HEARTY_STEW.get())
+        shapeless(RecipeCategory.FOOD, ModItems.HEARTY_STEW.get())
                 .requires(Items.BOWL)
                 .requires(ModItems.IRON_INFUSED_MILK.get())
                 .requires(Items.POTATO)
@@ -717,14 +736,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BERRY_BOWL.get())
+        shapeless(RecipeCategory.FOOD, ModItems.BERRY_BOWL.get())
                 .requires(ModItems.BLUEBERRIES.get())
                 .requires(Items.BOWL)
                 .requires(ModItems.RASPBERRIES.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BERRY_TOAST.get())
+        shapeless(RecipeCategory.FOOD, ModItems.BERRY_TOAST.get())
                 .requires(ModItems.BLUEBERRIES.get())
                 .requires(ModItems.TOAST.get())
                 .requires(ModItems.RASPBERRIES.get())
@@ -732,14 +751,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.RANCH_BOTTLE.get())
+        shapeless(RecipeCategory.FOOD, ModItems.RANCH_BOTTLE.get())
                 .requires(Items.GLASS_BOTTLE)
                 .requires(Items.MILK_BUCKET)
                 .requires(Items.WHEAT_SEEDS)
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.VEGETABLE_OIL.get())
+        shapeless(RecipeCategory.FOOD, ModItems.VEGETABLE_OIL.get())
                 .requires(Items.GLASS_BOTTLE)
                 .requires(ModItems.CRUSHED_TOMATO.get())
                 .requires(ModItems.LETTUCE.get())
@@ -747,96 +766,96 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.CRUSHED_TOMATO_BOTTLE.get())
+        shapeless(RecipeCategory.FOOD, ModItems.CRUSHED_TOMATO_BOTTLE.get())
                 .requires(Items.GLASS_BOTTLE)
                 .requires(ModItems.CRUSHED_TOMATO.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SLICED_GOAT_CHEESE.get(), 3)
+        shapeless(RecipeCategory.FOOD, ModItems.SLICED_GOAT_CHEESE.get(), 3)
                 .requires(ModItems.GOAT_CHEESE.get())
                 .requires(ModItems.COOKING_KNIFE.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BREAD_SLICE.get(), 8)
+        shapeless(RecipeCategory.FOOD, ModItems.BREAD_SLICE.get(), 8)
                 .requires(Items.BREAD)
                 .requires(ModItems.COOKING_KNIFE.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SALTED_RAW_BEEF.get())
+        shapeless(RecipeCategory.FOOD, ModItems.SALTED_RAW_BEEF.get())
                 .requires(Items.BEEF)
                 .requires(ModItems.SALT.get(), 2)
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SALTED_RAW_CHICKEN.get())
+        shapeless(RecipeCategory.FOOD, ModItems.SALTED_RAW_CHICKEN.get())
                 .requires(Items.CHICKEN)
                 .requires(ModItems.SALT.get(), 2)
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SALTED_RAW_COD.get())
+        shapeless(RecipeCategory.FOOD, ModItems.SALTED_RAW_COD.get())
                 .requires(Items.COD)
                 .requires(ModItems.SALT.get(), 2)
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SALTED_RAW_MUTTON.get())
+        shapeless(RecipeCategory.FOOD, ModItems.SALTED_RAW_MUTTON.get())
                 .requires(Items.MUTTON)
                 .requires(ModItems.SALT.get(), 2)
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SALTED_RAW_PORKCHOP.get())
+        shapeless(RecipeCategory.FOOD, ModItems.SALTED_RAW_PORKCHOP.get())
                 .requires(Items.PORKCHOP)
                 .requires(ModItems.SALT.get(), 2)
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SALTED_RAW_RABBIT.get())
+        shapeless(RecipeCategory.FOOD, ModItems.SALTED_RAW_RABBIT.get())
                 .requires(Items.RABBIT)
                 .requires(ModItems.SALT.get(), 2)
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SALTED_RAW_SALMON.get())
+        shapeless(RecipeCategory.FOOD, ModItems.SALTED_RAW_SALMON.get())
                 .requires(Items.SALMON)
                 .requires(ModItems.SALT.get(), 2)
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Blocks.CLAY, 6)
+        shapeless(RecipeCategory.MISC, Blocks.CLAY, 6)
                 .requires(Items.CLAY_BALL, 4)
                 .requires(ModItems.BASIC_DIRT_SCHEMATIC.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Blocks.COARSE_DIRT, 10)
+        shapeless(RecipeCategory.MISC, Blocks.COARSE_DIRT, 10)
                 .requires(Blocks.GRAVEL, 4)
                 .requires(ModItems.BASIC_DIRT_SCHEMATIC.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Blocks.ROOTED_DIRT, 8)
+        shapeless(RecipeCategory.MISC, Blocks.ROOTED_DIRT, 8)
                 .requires(Blocks.MANGROVE_ROOTS)
                 .requires(Blocks.DIRT, 3)
                 .requires(ModItems.BASIC_DIRT_SCHEMATIC.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Blocks.MUD, 12)
+        shapeless(RecipeCategory.MISC, Blocks.MUD, 12)
                 .requires(ModBlocks.MUD_BLOCK.get(), 3)
                 .requires(ModBlocks.DRIED_MUD_BLOCK.get())
                 .requires(ModItems.BASIC_DIRT_SCHEMATIC.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        woodenBoat(output, ModItems.CATALPA_BOAT.get(), ModBlocks.CATALPA_PLANKS.get());
-        chestBoat(output, ModItems.CATALPA_CHEST_BOAT.get(), ModItems.CATALPA_BOAT.get());
+        woodenBoat(ModItems.CATALPA_BOAT.get(), ModBlocks.CATALPA_PLANKS.get());
+        chestBoat(ModItems.CATALPA_CHEST_BOAT.get(), ModItems.CATALPA_BOAT.get());
 
         stairBuilder(ModBlocks.CATALPA_STAIRS.get(), Ingredient.of(ModBlocks.CATALPA_PLANKS)).group("catalpa")
                 .unlockedBy("has_catalpa", has(ModBlocks.CATALPA_PLANKS)).save(output);
-        slab(output, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CATALPA_SLAB.get(), ModBlocks.CATALPA_PLANKS.get());
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CATALPA_SLAB.get(), ModBlocks.CATALPA_PLANKS.get());
 
         buttonBuilder(ModBlocks.CATALPA_BUTTON.get(), Ingredient.of(ModBlocks.CATALPA_PLANKS.get())).group("catalpa")
                 .unlockedBy("has_catalpa", has(ModBlocks.CATALPA_PLANKS.get())).save(output);
-        pressurePlate(output, ModBlocks.CATALPA_PRESSURE_PLATE.get(), ModBlocks.CATALPA_PLANKS.get());
+        pressurePlate(ModBlocks.CATALPA_PRESSURE_PLATE.get(), ModBlocks.CATALPA_PLANKS.get());
 
         fenceBuilder(ModBlocks.CATALPA_FENCE.get(), Ingredient.of(ModBlocks.CATALPA_PLANKS.get())).group("catalpa")
                 .unlockedBy("has_catalpa", has(ModBlocks.CATALPA_PLANKS.get())).save(output);
@@ -848,23 +867,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         trapdoorBuilder(ModBlocks.CATALPA_TRAPDOOR.get(), Ingredient.of(ModBlocks.CATALPA_PLANKS.get())).group("catalpa")
                 .unlockedBy("has_catalpa", has(ModBlocks.CATALPA_PLANKS.get())).save(output);
 
-        planksFromLog(output, ModBlocks.CATALPA_PLANKS.get(), ModTags.Items.CATALPA_LOGS, 4);
-        woodFromLogs(output, ModBlocks.CATALPA_WOOD.get(), ModBlocks.CATALPA_LOG.get());
+        planksFromLog(ModBlocks.CATALPA_PLANKS.get(), ModTags.Items.CATALPA_LOGS, 4);
+        woodFromLogs(ModBlocks.CATALPA_WOOD.get(), ModBlocks.CATALPA_LOG.get());
 
         signBuilder(ModBlocks.CATALPA_SIGN.get(), Ingredient.of(ModBlocks.CATALPA_PLANKS.get())).unlockedBy("has_catalpa",
                 has(ModBlocks.CATALPA_PLANKS.get())).save(output);
-        hangingSign(output, ModBlocks.CATALPA_HANGING_SIGN.get(), ModBlocks.STRIPPED_CATALPA_LOG.get());
+        hangingSign(ModBlocks.CATALPA_HANGING_SIGN.get(), ModBlocks.STRIPPED_CATALPA_LOG.get());
 
-        woodenBoat(output, ModItems.RED_MAPLE_BOAT.get(), ModBlocks.RED_MAPLE_PLANKS.get());
-        chestBoat(output, ModItems.RED_MAPLE_CHEST_BOAT.get(), ModItems.RED_MAPLE_BOAT.get());
+        woodenBoat(ModItems.RED_MAPLE_BOAT.get(), ModBlocks.RED_MAPLE_PLANKS.get());
+        chestBoat(ModItems.RED_MAPLE_CHEST_BOAT.get(), ModItems.RED_MAPLE_BOAT.get());
 
         stairBuilder(ModBlocks.RED_MAPLE_STAIRS.get(), Ingredient.of(ModBlocks.RED_MAPLE_PLANKS)).group("red_maple")
                 .unlockedBy("has_red_maple", has(ModBlocks.RED_MAPLE_PLANKS)).save(output);
-        slab(output, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_MAPLE_SLAB.get(), ModBlocks.RED_MAPLE_PLANKS.get());
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_MAPLE_SLAB.get(), ModBlocks.RED_MAPLE_PLANKS.get());
 
         buttonBuilder(ModBlocks.RED_MAPLE_BUTTON.get(), Ingredient.of(ModBlocks.RED_MAPLE_PLANKS.get())).group("red_maple")
                 .unlockedBy("has_red_maple", has(ModBlocks.RED_MAPLE_PLANKS.get())).save(output);
-        pressurePlate(output, ModBlocks.RED_MAPLE_PRESSURE_PLATE.get(), ModBlocks.RED_MAPLE_PLANKS.get());
+        pressurePlate(ModBlocks.RED_MAPLE_PRESSURE_PLATE.get(), ModBlocks.RED_MAPLE_PLANKS.get());
 
         fenceBuilder(ModBlocks.RED_MAPLE_FENCE.get(), Ingredient.of(ModBlocks.RED_MAPLE_PLANKS.get())).group("red_maple")
                 .unlockedBy("has_red_maple", has(ModBlocks.RED_MAPLE_PLANKS.get())).save(output);
@@ -878,19 +897,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         signBuilder(ModBlocks.RED_MAPLE_SIGN.get(), Ingredient.of(ModBlocks.RED_MAPLE_PLANKS.get())).unlockedBy("has_red_maple",
                 has(ModBlocks.RED_MAPLE_PLANKS.get())).save(output);
-        hangingSign(output, ModBlocks.RED_MAPLE_HANGING_SIGN.get(), ModBlocks.STRIPPED_RED_MAPLE_LOG.get());
+        hangingSign(ModBlocks.RED_MAPLE_HANGING_SIGN.get(), ModBlocks.STRIPPED_RED_MAPLE_LOG.get());
 
-        planksFromLog(output, ModBlocks.RED_MAPLE_PLANKS.get(), ModTags.Items.RED_MAPLE_LOGS, 4);
-        woodFromLogs(output, ModBlocks.RED_MAPLE_WOOD.get(), ModBlocks.RED_MAPLE_LOG.get());
+        planksFromLog(ModBlocks.RED_MAPLE_PLANKS.get(), ModTags.Items.RED_MAPLE_LOGS, 4);
+        woodFromLogs(ModBlocks.RED_MAPLE_WOOD.get(), ModBlocks.RED_MAPLE_LOG.get());
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALLUMINITE_BOOTS.get())
+        shaped(RecipeCategory.TOOLS, ModItems.ALLUMINITE_BOOTS.get())
                 .pattern("A A")
                 .pattern("A A")
                 .define('A', ModItems.REINFORCED_ALLUMINITE_INGOT.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALLUMINITE_LEGGINGS.get())
+        shaped(RecipeCategory.TOOLS, ModItems.ALLUMINITE_LEGGINGS.get())
                 .pattern("AAA")
                 .pattern("A A")
                 .pattern("A A")
@@ -898,7 +917,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALLUMINITE_CHESTPLATE.get())
+        shaped(RecipeCategory.TOOLS, ModItems.ALLUMINITE_CHESTPLATE.get())
                 .pattern("A A")
                 .pattern("AAA")
                 .pattern("AAA")
@@ -906,21 +925,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALLUMINITE_HELMET.get())
+        shaped(RecipeCategory.TOOLS, ModItems.ALLUMINITE_HELMET.get())
                 .pattern("AAA")
                 .pattern("A A")
                 .define('A', ModItems.REINFORCED_ALLUMINITE_INGOT.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.OBSIDIAN_BOOTS.get())
+        shaped(RecipeCategory.TOOLS, ModItems.OBSIDIAN_BOOTS.get())
                 .pattern("A A")
                 .pattern("A A")
                 .define('A', ModBlocks.REINFORCED_OBSIDIAN.get())
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.OBSIDIAN_LEGGINGS.get())
+        shaped(RecipeCategory.TOOLS, ModItems.OBSIDIAN_LEGGINGS.get())
                 .pattern("AAA")
                 .pattern("A A")
                 .pattern("A A")
@@ -928,7 +947,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.OBSIDIAN_CHESTPLATE.get())
+        shaped(RecipeCategory.TOOLS, ModItems.OBSIDIAN_CHESTPLATE.get())
                 .pattern("A A")
                 .pattern("AAA")
                 .pattern("AAA")
@@ -936,7 +955,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.OBSIDIAN_HELMET.get())
+        shaped(RecipeCategory.TOOLS, ModItems.OBSIDIAN_HELMET.get())
                 .pattern("AAA")
                 .pattern("A A")
                 .define('A', ModBlocks.REINFORCED_OBSIDIAN.get())
@@ -1033,14 +1052,39 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         fromCampfireCooking(output, ModItems.SALTED_RAW_COD, RecipeCategory.FOOD, Items.COOKED_COD,
                 0.25f, 600, "salted_meats");
 
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModTags.Items.CATALPA_LOGS), RecipeCategory.MISC,
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.CATALPA_LOG), RecipeCategory.MISC,
                         Items.CHARCOAL,
                         5, 200).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
-                .save(output, "charcoal_from_catalpa_logs");
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModTags.Items.RED_MAPLE_LOGS), RecipeCategory.MISC,
+                .save(output, "charcoal_from_catalpa_log");
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.STRIPPED_CATALPA_LOG), RecipeCategory.MISC,
                         Items.CHARCOAL,
                         5, 200).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
-                .save(output, "charcoal_from_red_maple_logs");
+                .save(output, "charcoal_from_stripped_catalpa_log");
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.CATALPA_WOOD), RecipeCategory.MISC,
+                        Items.CHARCOAL,
+                        5, 200).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "charcoal_from_catalpa_wood");
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.STRIPPED_CATALPA_WOOD), RecipeCategory.MISC,
+                        Items.CHARCOAL,
+                        5, 200).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "charcoal_from_stripped_catalpa_wood");
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.RED_MAPLE_LOG), RecipeCategory.MISC,
+                        Items.CHARCOAL,
+                        5, 200).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "charcoal_from_red_maple_log");
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.STRIPPED_RED_MAPLE_LOG), RecipeCategory.MISC,
+                        Items.CHARCOAL,
+                        5, 200).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "charcoal_from_stripped_red_maple_log");
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.RED_MAPLE_WOOD), RecipeCategory.MISC,
+                        Items.CHARCOAL,
+                        5, 200).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "charcoal_from_red_maple_wood");
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.STRIPPED_RED_MAPLE_WOOD), RecipeCategory.MISC,
+                        Items.CHARCOAL,
+                        5, 200).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(output, "charcoal_from_stripped_red_maple_wood");
 
         fromSmelting(output, ModBlocks.COMPRESSED_MUD_BLOCK, RecipeCategory.BUILDING_BLOCKS, Blocks.TERRACOTTA,
                 0.25f, 200, "others");
@@ -1099,96 +1143,141 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     private void generateCrusherRecipes(RecipeOutput output) {
         CrusherRecipeBuilder.of(
-                ModTags.Items.ABOVE_IRON_HAMMERS,
+                Ingredient.of(
+                        registries.lookupOrThrow(Registries.ITEM)
+                                .getOrThrow(ModTags.Items.ABOVE_IRON_HAMMERS)
+                ),
                 ModItems.ALLUMINITE_AXE.get(),
                 ModItems.ALLUMINITE_ROD_SHARD.get()
         ).setAmount(3).save(output, "alluminite_rod_shard_from_axe");
 
         CrusherRecipeBuilder.of(
-                ModTags.Items.ABOVE_IRON_HAMMERS,
+                Ingredient.of(
+                        registries.lookupOrThrow(Registries.ITEM)
+                                .getOrThrow(ModTags.Items.ABOVE_IRON_HAMMERS)
+                ),
                 ModItems.ALLUMINITE_HOE.get(),
                 ModItems.ALLUMINITE_ROD_SHARD.get()
         ).setAmount(3).save(output, "alluminite_rod_shard_from_hoe");
 
         CrusherRecipeBuilder.of(
-                ModTags.Items.ABOVE_IRON_HAMMERS,
+                Ingredient.of(
+                        registries.lookupOrThrow(Registries.ITEM)
+                                .getOrThrow(ModTags.Items.ABOVE_IRON_HAMMERS)
+                ),
                 ModItems.ALLUMINITE_PICKAXE.get(),
                 ModItems.ALLUMINITE_ROD_SHARD.get()
         ).setAmount(3).save(output, "alluminite_rod_shard_from_pickaxe");
 
         CrusherRecipeBuilder.of(
-                ModTags.Items.ABOVE_IRON_HAMMERS,
+                Ingredient.of(
+                        registries.lookupOrThrow(Registries.ITEM)
+                                .getOrThrow(ModTags.Items.ABOVE_IRON_HAMMERS)
+                ),
                 ModItems.ALLUMINITE_SHOVEL.get(),
                 ModItems.ALLUMINITE_ROD_SHARD.get()
         ).setAmount(3).save(output, "alluminite_rod_shard_from_shovel");
 
         CrusherRecipeBuilder.of(
-                ModTags.Items.ABOVE_IRON_HAMMERS,
+                Ingredient.of(
+                        registries.lookupOrThrow(Registries.ITEM)
+                                .getOrThrow(ModTags.Items.ABOVE_IRON_HAMMERS)
+                ),
                 ModItems.ALLUMINITE_SWORD.get(),
                 ModItems.ALLUMINITE_ROD_SHARD.get()
         ).setAmount(3).save(output, "alluminite_rod_shard_from_sword");
 
         CrusherRecipeBuilder.of(
-                ModTags.Items.ABOVE_STONE_HAMMERS,
+                Ingredient.of(
+                        registries.lookupOrThrow(Registries.ITEM)
+                                .getOrThrow(ModTags.Items.ABOVE_STONE_HAMMERS)
+                ),
                 ModItems.ORANGE_SEEDS.get(),
                 ModItems.ORANGE_SEED_POWDER.get()
-        ).save(output, "orange_seed_powder");
+        ).setAmount(1).save(output, "orange_seed_powder");
 
         CrusherRecipeBuilder.of(
-                ModTags.Items.ABOVE_IRON_HAMMERS,
+                Ingredient.of(
+                        registries.lookupOrThrow(Registries.ITEM)
+                                .getOrThrow(ModTags.Items.ABOVE_IRON_HAMMERS)
+                ),
                 Items.DIAMOND,
                 ModItems.DIAMOND_CHUNKS.get()
-        ).save(output, "diamond_chunks");
+        ).setAmount(1).save(output, "diamond_chunks");
 
         CrusherRecipeBuilder.of(
-                ModTags.Items.ABOVE_OBSIDIAN_HAMMERS,
+                Ingredient.of(
+                        registries.lookupOrThrow(Registries.ITEM)
+                                .getOrThrow(ModTags.Items.ABOVE_OBSIDIAN_HAMMERS)
+                ),
                 ModItems.DIAMOND_CHUNKS.get(),
                 ModItems.DIAMOND_POWDER.get()
-        ).save(output, "diamond_dust");
+        ).setAmount(1).save(output, "diamond_powder");
 
         CrusherRecipeBuilder.of(
-                ModTags.Items.ABOVE_IRON_HAMMERS,
+                Ingredient.of(
+                        registries.lookupOrThrow(Registries.ITEM)
+                                .getOrThrow(ModTags.Items.ABOVE_IRON_HAMMERS)
+                ),
                 Items.IRON_INGOT,
                 ModItems.IRON_CHUNKS.get()
-        ).save(output, "iron_chunks");
+        ).setAmount(1).save(output, "iron_chunks");
 
         CrusherRecipeBuilder.of(
-                ModTags.Items.ABOVE_IRON_HAMMERS,
+                Ingredient.of(
+                        registries.lookupOrThrow(Registries.ITEM)
+                                .getOrThrow(ModTags.Items.ABOVE_OBSIDIAN_HAMMERS)
+                ),
                 ModItems.IRON_CHUNKS.get(),
                 ModItems.IRON_POWDER.get()
-        ).save(output, "iron_powder");
+        ).setAmount(1).save(output, "iron_powder");
 
         CrusherRecipeBuilder.of(
-                ModTags.Items.ABOVE_STONE_HAMMERS,
+                Ingredient.of(
+                        registries.lookupOrThrow(Registries.ITEM)
+                                .getOrThrow(ModTags.Items.ABOVE_STONE_HAMMERS)
+                ),
                 ModItems.TOMATO.get(),
                 ModItems.CRUSHED_TOMATO.get()
-        ).save(output, "crushed_tomato");
+        ).setAmount(1).save(output, "crushed_tomato");
 
         CrusherRecipeBuilder.of(
-                ModTags.Items.ABOVE_STONE_HAMMERS,
+                Ingredient.of(
+                        registries.lookupOrThrow(Registries.ITEM)
+                                .getOrThrow(ModTags.Items.ABOVE_STONE_HAMMERS)
+                ),
                 Items.BAKED_POTATO,
                 ModItems.POTATO_BITS.get()
-        ).save(output, "potato_bits");
+        ).setAmount(1).save(output, "potato_bits");
 
     }
 
     private void generateObsidianForgerRecipes(RecipeOutput output) {
         ObsidianForgerRecipeBuilder.of(
-                ModTags.Items.ABOVE_DIAMOND_HAMMERS,
+                Ingredient.of(
+                        registries.lookupOrThrow(Registries.ITEM)
+                                .getOrThrow(ModTags.Items.ABOVE_DIAMOND_HAMMERS)
+                ),
                 ModBlocks.REINFORCED_OBSIDIAN.get().asItem(),
                 ModItems.RAW_LUMINIUM.get(),
                 ModItems.LUMINIUM_GEM.get()
         ).save(output, "luminium_gem");
 
         ObsidianForgerRecipeBuilder.of(
-                ModTags.Items.ABOVE_DIAMOND_HAMMERS,
+                Ingredient.of(
+                        registries.lookupOrThrow(Registries.ITEM)
+                                .getOrThrow(ModTags.Items.ABOVE_DIAMOND_HAMMERS)
+                ),
                 ModBlocks.REINFORCED_OBSIDIAN.get().asItem(),
                 ModItems.LUMINIUM_GEM.get(),
                 ModItems.REINFORCED_LUMINIUM_GEM.get()
         ).save(output, "reinforced_luminium_gem");
 
         ObsidianForgerRecipeBuilder.of(
-                ModTags.Items.ABOVE_DIAMOND_HAMMERS,
+                Ingredient.of(
+                        registries.lookupOrThrow(Registries.ITEM)
+                                .getOrThrow(ModTags.Items.ABOVE_DIAMOND_HAMMERS)
+                ),
                 Blocks.OBSIDIAN.asItem(),
                 ModItems.REINFORCED_ALLUMINITE_INGOT.get(),
                 ModBlocks.REINFORCED_OBSIDIAN.get().asItem()
@@ -1200,36 +1289,36 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(output, "pasteurizer_dummy_recipe");
     }
 
-    protected static void nineBlockStorageRecipes(RecipeOutput output, ItemLike block, ItemLike item) {
-        nineBlockStorageRecipes(output, RecipeCategory.BUILDING_BLOCKS, item, RecipeCategory.MISC, block);
+    protected void nineBlockStorageRecipes(RecipeOutput output, ItemLike block, ItemLike item) {
+        nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS, item, RecipeCategory.MISC, block);
     }
 
-    protected static void fromSmelting(RecipeOutput recipeOutput, ItemLike pIngredients, RecipeCategory pCategory, ItemLike pResult,
+    protected void fromSmelting(RecipeOutput recipeOutput, ItemLike pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                        float pExperience, int pCookingTIme, String pGroup) {
         cooking(recipeOutput, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new, pIngredients, pCategory, pResult,
                 pExperience, pCookingTIme, pGroup, "_from_smelting");
     }
 
-    protected static void fromBlasting(RecipeOutput recipeOutput, ItemLike pIngredients, RecipeCategory pCategory, ItemLike pResult,
+    protected void fromBlasting(RecipeOutput recipeOutput, ItemLike pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                        float pExperience, int pCookingTime, String pGroup) {
         cooking(recipeOutput, RecipeSerializer.BLASTING_RECIPE, BlastingRecipe::new, pIngredients, pCategory, pResult,
                 pExperience, pCookingTime, pGroup, "_from_blasting");
     }
 
-    protected static void fromSmoking(RecipeOutput recipeOutput, ItemLike pIngredients, RecipeCategory pCategory, ItemLike pResult,
+    protected void fromSmoking(RecipeOutput recipeOutput, ItemLike pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                       float pExperience, int pCookingTime, String pGroup) {
         cooking(recipeOutput, RecipeSerializer.SMOKING_RECIPE, SmokingRecipe::new, pIngredients, pCategory, pResult,
                 pExperience, pCookingTime, pGroup, "_from_smoking");
     }
 
-    protected static void fromCampfireCooking(RecipeOutput recipeOutput, ItemLike pIngredients, RecipeCategory pCategory, ItemLike pResult,
+    protected void fromCampfireCooking(RecipeOutput recipeOutput, ItemLike pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                               float pExperience, int pCookingTime, String pGroup) {
         cooking(recipeOutput, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, CampfireCookingRecipe::new, pIngredients, pCategory, pResult,
                 pExperience, pCookingTime, pGroup, "_from_campfire_cooking");
     }
 
-    protected static <T extends AbstractCookingRecipe> void cooking(RecipeOutput recipeOutput, RecipeSerializer<T> pCookingSerializer, AbstractCookingRecipe.Factory<T> factory,
-                                                                    ItemLike pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
+    protected <T extends AbstractCookingRecipe> void cooking(RecipeOutput recipeOutput, RecipeSerializer<T> pCookingSerializer, AbstractCookingRecipe.Factory<T> factory,
+                                                             ItemLike pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
         SimpleCookingRecipeBuilder.generic(Ingredient.of(pIngredients), pCategory, pResult, pExperience, pCookingTime, pCookingSerializer, factory).group(pGroup).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(recipeOutput, MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(pIngredients));
     }

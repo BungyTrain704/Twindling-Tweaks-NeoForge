@@ -21,7 +21,11 @@ public class ModBoatEntity extends Boat {
     private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(ModBoatEntity.class, EntityDataSerializers.INT);
 
     public ModBoatEntity(EntityType<? extends Boat> pEntityType, Level pLevel) {
-        super(pEntityType, pLevel);
+        super(
+                pEntityType,
+                pLevel,
+                ModItems.CATALPA_BOAT
+        );
     }
 
     public ModBoatEntity(Level level, double pX, double pY, double pZ) {
@@ -30,13 +34,6 @@ public class ModBoatEntity extends Boat {
         this.xo = pX;
         this.yo = pY;
         this.zo = pZ;
-    }
-
-    @Override
-    public Item getDropItem() {
-        return switch (getModVariant()) {
-            case CATALPA -> ModItems.CATALPA_BOAT.get();
-        };
     }
 
     public void setVariant(Type pVariant) {

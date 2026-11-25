@@ -2,6 +2,7 @@ package com.austinplays.twindlingtweaks.block.entity.custom.farmland;
 
 import com.austinplays.twindlingtweaks.block.entity.ModBlockEntities;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
@@ -39,7 +40,10 @@ public class ModFarmlandBlockEntity3 extends BlockEntity {
     public void loadAdditional(CompoundTag tag, HolderLookup.Provider provider) {
         super.loadAdditional(tag, provider);
         if (tag.contains("LastCrop")) {
-            lastCrop = BuiltInRegistries.BLOCK.get(ResourceLocation.parse(tag.getString("LastCrop")));
+            lastCrop = BuiltInRegistries.BLOCK
+                    .get(ResourceLocation.parse(tag.getString("LastCrop")))
+                    .map(Holder.Reference::value)
+                    .orElse(null);
         }
     }
 }

@@ -4,16 +4,18 @@ import com.austinplays.twindlingtweaks.entity.custom.boat.ModBoatEntity;
 import com.austinplays.twindlingtweaks.entity.custom.chest_boat.ModChestBoatEntity;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntitySelector;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.vehicle.AbstractBoat;
 import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.FuelValues;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.HitResult;
@@ -36,11 +38,11 @@ public class ModBoatItem extends Item {
         this.burnTime = burnTime;
     }
 
-    public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pHand) {
+    public InteractionResult use(Level pLevel, Player pPlayer, InteractionHand pHand) {
         ItemStack itemstack = pPlayer.getItemInHand(pHand);
         HitResult hitresult = getPlayerPOVHitResult(pLevel, pPlayer, ClipContext.Fluid.ANY);
         if (hitresult.getType() == HitResult.Type.MISS) {
-            return InteractionResultHolder.pass(itemstack);
+            return InteractionResult.PASS;
         } else {
             Vec3 vec3 = pPlayer.getViewVector(1.0F);
             List<Entity> list = pLevel.getEntities(pPlayer, pPlayer.getBoundingBox().expandTowards(vec3.scale(5.0D)).inflate(1.0D), ENTITY_PREDICATE);
@@ -50,13 +52,13 @@ public class ModBoatItem extends Item {
                 for(Entity entity : list) {
                     AABB aabb = entity.getBoundingBox().inflate((double)entity.getPickRadius());
                     if (aabb.contains(vec31)) {
-                        return InteractionResultHolder.pass(itemstack);
+                        return InteractionResult.PASS;
                     }
                 }
             }
 
             if (hitresult.getType() == HitResult.Type.BLOCK) {
-                Boat boat = this.getBoat(pLevel, hitresult);
+                AbstractBoat boat = this.getBoat(pLevel, hitresult);
                 if(boat instanceof ModChestBoatEntity chestBoat) {
                     chestBoat.setVariant(this.type);
                 } else if(boat instanceof ModBoatEntity) {
@@ -64,7 +66,7 @@ public class ModBoatItem extends Item {
                 }
                 boat.setYRot(pPlayer.getYRot());
                 if (!pLevel.noCollision(boat, boat.getBoundingBox())) {
-                    return InteractionResultHolder.fail(itemstack);
+                    return InteractionResult.FAIL;
                 } else {
                     if (!pLevel.isClientSide) {
                         pLevel.addFreshEntity(boat);
@@ -75,20 +77,32 @@ public class ModBoatItem extends Item {
                     }
 
                     pPlayer.awardStat(Stats.ITEM_USED.get(this));
-                    return InteractionResultHolder.sidedSuccess(itemstack, pLevel.isClientSide());
+                    return InteractionResult.SUCCESS;
                 }
             } else {
-                return InteractionResultHolder.pass(itemstack);
+                return InteractionResult.PASS;
             }
         }
     }
 
-    private Boat getBoat(Level p_220017_, HitResult p_220018_) {
-        return (Boat)(this.hasChest ? new ModChestBoatEntity(p_220017_, p_220018_.getLocation().x, p_220018_.getLocation().y, p_220018_.getLocation().z) :
-                new ModBoatEntity(p_220017_, p_220018_.getLocation().x, p_220018_.getLocation().y, p_220018_.getLocation().z));
+    private AbstractBoat getBoat(Level level, HitResult hitResult) {
+        return this.hasChest
+                ? new ModChestBoatEntity(
+                level,
+                hitResult.getLocation().x,
+                hitResult.getLocation().y,
+                hitResult.getLocation().z
+        )
+                : new ModBoatEntity(
+                level,
+                hitResult.getLocation().x,
+                hitResult.getLocation().y,
+                hitResult.getLocation().z
+        );
     }
+
     @Override
-    public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
+    public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType, FuelValues values) {
         return this.burnTime;
     }
 }

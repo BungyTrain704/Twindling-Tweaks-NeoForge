@@ -64,27 +64,6 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.CORN.get(),
                         ModItems.BROCCOLI.get());
 
-        this.tag(Tags.Items.DRINKS)
-                .add(ModItems.KETCHUP_BOTTLE.get(),
-                        ModItems.ORANGE_SEED_MILK.get(),
-                        ModItems.IRON_INFUSED_MILK.get(),
-                        ModItems.DIAMOND_INFUSED_MILK.get(),
-                        ModItems.GOAT_MILK.get());
-
-        this.tag(Tags.Items.DRINKS_WATERY)
-                .add(ModItems.KETCHUP_BOTTLE.get());
-
-        this.tag(Tags.Items.DRINKS_MILK)
-                .add(ModItems.ORANGE_SEED_MILK.get(),
-                        ModItems.IRON_INFUSED_MILK.get(),
-                        ModItems.DIAMOND_INFUSED_MILK.get(),
-                        ModItems.GOAT_MILK.get());
-
-        this.tag(Tags.Items.DRINKS_MAGIC)
-                .add(ModItems.ORANGE_SEED_MILK.get(),
-                        ModItems.IRON_INFUSED_MILK.get(),
-                        ModItems.DIAMOND_INFUSED_MILK.get());
-
         this.tag(Tags.Items.DUSTS)
                 .add(ModItems.IRON_POWDER.get(),
                         ModItems.DIAMOND_POWDER.get(),
@@ -412,6 +391,12 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.tag(ItemTags.PLANKS)
                 .add(ModBlocks.CATALPA_PLANKS.get().asItem())
                 .add(ModBlocks.RED_MAPLE_PLANKS.get().asItem());
+
+        this.tag(ModTags.Items.ALLUMINITE_REPAIRABLE)
+                .add(ModItems.REINFORCED_ALLUMINITE_INGOT.get());
+
+        this.tag(ModTags.Items.OBSIDIAN_REPAIRABLE)
+                .add(ModBlocks.REINFORCED_OBSIDIAN.get().asItem());
 
         this.tag(ItemTags.MEAT)
                 .add(ModItems.SALTED_RAW_BEEF.get(),

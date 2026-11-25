@@ -201,14 +201,16 @@ public class ObsidianForgerBlockEntity extends BlockEntity {
         ObsidianForgerRecipeInput input = new ObsidianForgerRecipeInput(inv);
 
         assert level != null;
-        Optional<ObsidianForgerRecipe> match = level.getRecipeManager()
+        Optional<ObsidianForgerRecipe> match = ((ServerLevel) level).recipeAccess()
                 .getRecipeFor(ObsidianForgerRecipe.TYPE, input, level)
                 .map(RecipeHolder::value);
 
         return match.isPresent()
                 && canInsertAmountIntoOutputSlot(entity.itemHandler)
-                && canInsertItemIntoOutputSlot(entity.itemHandler,
-                match.get().getResultItem(level.registryAccess()));
+                && canInsertItemIntoOutputSlot(
+                entity.itemHandler,
+                match.get().getOutput()
+        );
     }
 
     private static void craftItem(ObsidianForgerBlockEntity entity) {
@@ -223,7 +225,7 @@ public class ObsidianForgerBlockEntity extends BlockEntity {
 
         ObsidianForgerRecipeInput input = new ObsidianForgerRecipeInput(inv);
 
-        Optional<ObsidianForgerRecipe> match = level.getRecipeManager()
+        Optional<ObsidianForgerRecipe> match = ((ServerLevel) level).recipeAccess()
                 .getRecipeFor(ObsidianForgerRecipe.TYPE, input, level)
                 .map(RecipeHolder::value);
 
@@ -245,7 +247,7 @@ public class ObsidianForgerBlockEntity extends BlockEntity {
         entity.itemHandler.setStackInSlot(
                 3,
                 new ItemStack(
-                        match.get().getResultItem(level.registryAccess()).getItem(),
+                        match.get().getOutput().getItem(),
                         entity.itemHandler.getStackInSlot(3).getCount() + 1
                 )
         );

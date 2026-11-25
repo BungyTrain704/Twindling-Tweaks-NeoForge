@@ -119,7 +119,7 @@ public class ModFarmlandBlock4 extends FarmBlock implements EntityBlock {
 
     @Override
     public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
-        if (!level.isClientSide && net.neoforged.neoforge.common.CommonHooks.onFarmlandTrample(level, pos, ModBlocks.ALLUMIN_LUMINIUM_DIRT.get().defaultBlockState(), fallDistance, entity)) {
+        if (!level.isClientSide && net.neoforged.neoforge.common.CommonHooks.onFarmlandTrample((ServerLevel) level, pos, ModBlocks.ALLUMIN_LUMINIUM_DIRT.get().defaultBlockState(), fallDistance, entity)) {
             turnToDirt(entity, state, level, pos);
         }
     }

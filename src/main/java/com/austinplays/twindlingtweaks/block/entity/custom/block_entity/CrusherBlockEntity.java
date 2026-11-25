@@ -193,7 +193,7 @@ public class CrusherBlockEntity extends BlockEntity {
         CrusherRecipeInput input = new CrusherRecipeInput(inv);
 
         assert level != null;
-        java.util.Optional<CrusherRecipe> match = level.getRecipeManager()
+        java.util.Optional<CrusherRecipe> match = ((ServerLevel) level).recipeAccess()
                 .getRecipeFor(CrusherRecipe.TYPE, input, level)
                 .map(RecipeHolder::value);
 
@@ -201,7 +201,7 @@ public class CrusherBlockEntity extends BlockEntity {
                 && canInsertAmountIntoOutputSlot(entity.itemHandler)
                 && canInsertItemIntoOutputSlot(
                 entity.itemHandler,
-                match.get().getResultItem(level.registryAccess())
+                match.get().getOutput()
         );
     }
 
@@ -214,7 +214,7 @@ public class CrusherBlockEntity extends BlockEntity {
         CrusherRecipeInput input = new CrusherRecipeInput(inv);
 
         assert level != null;
-        java.util.Optional<CrusherRecipe> match = level.getRecipeManager()
+        java.util.Optional<CrusherRecipe> match = ((ServerLevel) level).recipeAccess()
                 .getRecipeFor(CrusherRecipe.TYPE, input, level)
                 .map(RecipeHolder::value);
 
@@ -231,11 +231,13 @@ public class CrusherBlockEntity extends BlockEntity {
             );
         }
                 entity.itemHandler.extractItem(1, 1, false);
-                entity.itemHandler.setStackInSlot(2, new ItemStack(
-                        match.get().getResultItem(level.registryAccess()).getItem(),
+        entity.itemHandler.setStackInSlot(
+                2,
+                new ItemStack(
+                        match.get().getOutput().getItem(),
                         entity.itemHandler.getStackInSlot(2).getCount() + 1
-                ));
-                entity.resetProgress();
+                )
+        );
             }
 
     private void resetProgress() {

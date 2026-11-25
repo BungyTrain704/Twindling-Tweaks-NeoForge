@@ -70,7 +70,7 @@ public class PasteurizerBlock extends BaseEntityBlock {
                 }, (buf) -> buf.writeBlockPos(pos));
             }
         }
-        return InteractionResult.sidedSuccess(level.isClientSide());
+        return InteractionResult.SUCCESS;
     }
 
     @Nullable

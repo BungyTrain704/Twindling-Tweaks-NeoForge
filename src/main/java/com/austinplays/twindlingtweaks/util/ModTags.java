@@ -43,6 +43,9 @@ public class ModTags {
 
         public static final TagKey<Item> HAMMERS = createTag("hammers");
 
+        public static final TagKey<Item> ALLUMINITE_REPAIRABLE = createTag("alluminite_repairable");
+        public static final TagKey<Item> OBSIDIAN_REPAIRABLE = createTag("obsidian_repairable");
+
         public static final TagKey<Item> ABOVE_STONE_HAMMERS = createTag("above_stone_hammers");
         public static final TagKey<Item> ABOVE_IRON_HAMMERS = createTag("above_iron_hammers");
         public static final TagKey<Item> ABOVE_DIAMOND_HAMMERS = createTag("above_diamond_hammers");

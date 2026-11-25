@@ -5,15 +5,11 @@ import com.austinplays.twindlingtweaks.recipes.be_recipes.CrusherRecipe;
 import com.austinplays.twindlingtweaks.recipes.be_recipes.FiltererRecipe;
 import com.austinplays.twindlingtweaks.recipes.be_recipes.ObsidianForgerRecipe;
 import com.austinplays.twindlingtweaks.recipes.be_recipes.PasteurizerRecipe;
-
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-
-import net.minecraft.world.item.crafting.SimpleCraftingRecipeSerializer;
-import net.neoforged.neoforge.registries.DeferredRegister;
-import net.neoforged.neoforge.registries.DeferredHolder;
-
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModRecipes {
 
