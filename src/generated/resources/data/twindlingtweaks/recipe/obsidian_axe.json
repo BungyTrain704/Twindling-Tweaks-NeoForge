@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "A": {
-      "item": "twindlingtweaks:reinforced_obsidian"
-    },
-    "R": {
-      "item": "minecraft:stick"
-    }
+    "A": "twindlingtweaks:reinforced_obsidian",
+    "R": "minecraft:stick"
   },
   "pattern": [
     "AA",

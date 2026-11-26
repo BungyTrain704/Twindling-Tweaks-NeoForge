@@ -4,9 +4,7 @@
   "cookingtime": 200,
   "experience": 0.25,
   "group": "salted_meats",
-  "ingredient": {
-    "item": "twindlingtweaks:salted_raw_beef"
-  },
+  "ingredient": "twindlingtweaks:salted_raw_beef",
   "result": {
     "count": 1,
     "id": "minecraft:cooked_beef"

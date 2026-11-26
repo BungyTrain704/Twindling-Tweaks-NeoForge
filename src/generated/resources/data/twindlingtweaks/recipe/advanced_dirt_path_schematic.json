@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "C": {
-      "item": "twindlingtweaks:basic_dirt_path_schematic"
-    },
-    "L": {
-      "item": "minecraft:lapis_lazuli"
-    }
+    "C": "twindlingtweaks:basic_dirt_path_schematic",
+    "L": "minecraft:lapis_lazuli"
   },
   "pattern": [
     "LLL",

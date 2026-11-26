@@ -2,9 +2,7 @@
   "type": "twindlingtweaks:filterer",
   "id": "twindlingtweaks:ketchup_bottle",
   "ingredients": [
-    {
-      "item": "twindlingtweaks:crushed_tomato_bottle"
-    }
+    "twindlingtweaks:crushed_tomato_bottle"
   ],
   "output": {
     "count": 1,

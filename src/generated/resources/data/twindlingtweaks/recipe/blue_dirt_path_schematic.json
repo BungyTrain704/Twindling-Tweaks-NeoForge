@@ -2,9 +2,7 @@
   "type": "twindlingtweaks:filterer",
   "id": "twindlingtweaks:blue_dirt_path_schematic",
   "ingredients": [
-    {
-      "item": "twindlingtweaks:blue_dirt_schematic"
-    }
+    "twindlingtweaks:blue_dirt_schematic"
   ],
   "output": {
     "count": 1,

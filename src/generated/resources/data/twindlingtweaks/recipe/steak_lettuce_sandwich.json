@@ -2,21 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "twindlingtweaks:lettuce"
-    },
-    {
-      "item": "twindlingtweaks:bread_slice"
-    },
-    {
-      "item": "twindlingtweaks:bread_slice"
-    },
-    {
-      "item": "twindlingtweaks:ketchup_bottle"
-    },
-    {
-      "item": "minecraft:cooked_beef"
-    }
+    "twindlingtweaks:lettuce",
+    "twindlingtweaks:bread_slice",
+    "twindlingtweaks:bread_slice",
+    "twindlingtweaks:ketchup_bottle",
+    "minecraft:cooked_beef"
   ],
   "result": {
     "count": 1,

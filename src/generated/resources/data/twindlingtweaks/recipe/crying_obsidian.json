@@ -2,9 +2,7 @@
   "type": "twindlingtweaks:filterer",
   "id": "twindlingtweaks:crying_obsidian",
   "ingredients": [
-    {
-      "item": "minecraft:obsidian"
-    }
+    "minecraft:obsidian"
   ],
   "output": {
     "count": 1,

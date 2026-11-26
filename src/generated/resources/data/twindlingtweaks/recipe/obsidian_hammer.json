@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "A": {
-      "item": "twindlingtweaks:alluminite_rod"
-    },
-    "R": {
-      "item": "twindlingtweaks:reinforced_obsidian"
-    },
-    "U": {
-      "item": "twindlingtweaks:unstable_alluminite_ingot"
-    }
+    "A": "twindlingtweaks:alluminite_rod",
+    "R": "twindlingtweaks:reinforced_obsidian",
+    "U": "twindlingtweaks:unstable_alluminite_ingot"
   },
   "pattern": [
     "UUU",

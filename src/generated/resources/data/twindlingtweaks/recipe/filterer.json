@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "A": {
-      "item": "twindlingtweaks:reinforced_alluminite_ingot"
-    },
-    "I": {
-      "item": "minecraft:iron_ingot"
-    },
-    "P": {
-      "item": "twindlingtweaks:catalpa_planks"
-    }
+    "A": "twindlingtweaks:reinforced_alluminite_ingot",
+    "I": "minecraft:iron_ingot",
+    "P": "twindlingtweaks:catalpa_planks"
   },
   "pattern": [
     "IPI",

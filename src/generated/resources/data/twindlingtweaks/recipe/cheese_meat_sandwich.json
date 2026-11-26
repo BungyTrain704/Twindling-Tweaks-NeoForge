@@ -2,21 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "twindlingtweaks:goat_cheese"
-    },
-    {
-      "item": "twindlingtweaks:bread_slice"
-    },
-    {
-      "item": "twindlingtweaks:bread_slice"
-    },
-    {
-      "item": "twindlingtweaks:goat_butter"
-    },
-    {
-      "item": "minecraft:cooked_beef"
-    }
+    "twindlingtweaks:goat_cheese",
+    "twindlingtweaks:bread_slice",
+    "twindlingtweaks:bread_slice",
+    "twindlingtweaks:goat_butter",
+    "minecraft:cooked_beef"
   ],
   "result": {
     "count": 1,

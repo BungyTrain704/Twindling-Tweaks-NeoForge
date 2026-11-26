@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "B": {
-      "item": "twindlingtweaks:luminium_block"
-    },
-    "C": {
-      "item": "twindlingtweaks:combined_dirt_schematic"
-    },
-    "R": {
-      "item": "twindlingtweaks:reinforced_luminium_gem"
-    }
+    "B": "twindlingtweaks:luminium_block",
+    "C": "twindlingtweaks:combined_dirt_schematic",
+    "R": "twindlingtweaks:reinforced_luminium_gem"
   },
   "pattern": [
     " R ",

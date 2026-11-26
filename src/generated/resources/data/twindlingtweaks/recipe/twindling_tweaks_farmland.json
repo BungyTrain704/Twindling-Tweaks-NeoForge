@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "A": {
-      "item": "twindlingtweaks:reinforced_alluminite_ingot"
-    },
-    "D": {
-      "item": "twindlingtweaks:combined_dirt"
-    },
-    "L": {
-      "item": "twindlingtweaks:luminium_block"
-    }
+    "A": "twindlingtweaks:reinforced_alluminite_ingot",
+    "D": "twindlingtweaks:combined_dirt",
+    "L": "twindlingtweaks:luminium_block"
   },
   "pattern": [
     " A ",

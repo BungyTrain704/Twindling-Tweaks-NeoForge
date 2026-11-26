@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "B": {
-      "item": "minecraft:gold_block"
-    },
-    "C": {
-      "item": "twindlingtweaks:yellow_dirt_schematic"
-    },
-    "I": {
-      "item": "minecraft:gold_ingot"
-    }
+    "B": "minecraft:gold_block",
+    "C": "twindlingtweaks:yellow_dirt_schematic",
+    "I": "minecraft:gold_ingot"
   },
   "pattern": [
     " B ",

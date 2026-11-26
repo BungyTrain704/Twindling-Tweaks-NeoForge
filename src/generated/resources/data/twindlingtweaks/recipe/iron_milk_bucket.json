@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "I": {
-      "item": "twindlingtweaks:iron_powder"
-    },
-    "M": {
-      "item": "minecraft:milk_bucket"
-    }
+    "I": "twindlingtweaks:iron_powder",
+    "M": "minecraft:milk_bucket"
   },
   "pattern": [
     "III",

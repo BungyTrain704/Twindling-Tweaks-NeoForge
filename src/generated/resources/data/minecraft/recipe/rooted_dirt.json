@@ -2,21 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:mangrove_roots"
-    },
-    {
-      "item": "minecraft:dirt"
-    },
-    {
-      "item": "minecraft:dirt"
-    },
-    {
-      "item": "minecraft:dirt"
-    },
-    {
-      "item": "twindlingtweaks:basic_dirt_schematic"
-    }
+    "minecraft:mangrove_roots",
+    "minecraft:dirt",
+    "minecraft:dirt",
+    "minecraft:dirt",
+    "twindlingtweaks:basic_dirt_schematic"
   ],
   "result": {
     "count": 8,

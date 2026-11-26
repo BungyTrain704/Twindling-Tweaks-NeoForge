@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "twindlingtweaks:goat_cheese"
-    },
-    {
-      "item": "twindlingtweaks:cooking_knife"
-    }
+    "twindlingtweaks:goat_cheese",
+    "twindlingtweaks:cooking_knife"
   ],
   "result": {
     "count": 3,

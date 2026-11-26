@@ -2,9 +2,7 @@
   "type": "twindlingtweaks:filterer",
   "id": "twindlingtweaks:sugar_filtered",
   "ingredients": [
-    {
-      "item": "twindlingtweaks:unfiltered_sugar"
-    }
+    "twindlingtweaks:unfiltered_sugar"
   ],
   "output": {
     "count": 2,

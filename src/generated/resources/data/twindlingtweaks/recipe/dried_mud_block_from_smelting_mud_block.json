@@ -4,9 +4,7 @@
   "cookingtime": 180,
   "experience": 0.25,
   "group": "mud",
-  "ingredient": {
-    "item": "twindlingtweaks:mud_block"
-  },
+  "ingredient": "twindlingtweaks:mud_block",
   "result": {
     "count": 1,
     "id": "twindlingtweaks:dried_mud_block"

@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:egg"
-    },
-    {
-      "item": "twindlingtweaks:vegetable_oil"
-    }
+    "minecraft:egg",
+    "twindlingtweaks:vegetable_oil"
   ],
   "result": {
     "count": 1,

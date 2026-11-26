@@ -4,9 +4,7 @@
   "cookingtime": 180,
   "experience": 0.25,
   "group": "salad_ingredients",
-  "ingredient": {
-    "item": "minecraft:bread"
-  },
+  "ingredient": "minecraft:bread",
   "result": {
     "count": 1,
     "id": "twindlingtweaks:crouton"

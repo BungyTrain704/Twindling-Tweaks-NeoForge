@@ -2,12 +2,8 @@
   "type": "twindlingtweaks:crushing",
   "id": "twindlingtweaks:alluminite_rod_shard_from_pickaxe",
   "ingredients": [
-    {
-      "tag": "twindlingtweaks:above_iron_hammers"
-    },
-    {
-      "item": "twindlingtweaks:alluminite_pickaxe"
-    }
+    "#twindlingtweaks:above_iron_hammers",
+    "twindlingtweaks:alluminite_pickaxe"
   ],
   "output": {
     "count": 3,

@@ -3,9 +3,7 @@
   "category": "redstone",
   "group": "red_maple",
   "key": {
-    "#": {
-      "item": "twindlingtweaks:red_maple_planks"
-    }
+    "#": "twindlingtweaks:red_maple_planks"
   },
   "pattern": [
     "###",

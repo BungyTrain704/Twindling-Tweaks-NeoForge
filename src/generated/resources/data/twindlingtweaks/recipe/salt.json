@@ -2,9 +2,7 @@
   "type": "twindlingtweaks:filterer",
   "id": "twindlingtweaks:salt",
   "ingredients": [
-    {
-      "item": "twindlingtweaks:salt_rock"
-    }
+    "twindlingtweaks:salt_rock"
   ],
   "output": {
     "count": 2,

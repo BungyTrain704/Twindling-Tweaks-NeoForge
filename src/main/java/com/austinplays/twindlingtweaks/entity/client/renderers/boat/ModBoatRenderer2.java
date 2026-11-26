@@ -10,6 +10,6 @@ import net.minecraft.resources.ResourceLocation;
 public class ModBoatRenderer2 extends BoatRenderer {
 
     public ModBoatRenderer2(EntityRendererProvider.Context context) {
-        super(context, ModModelLayers.CATALPA_BOAT_LAYER);
+        super(context, ModModelLayers.RED_MAPLE_BOAT_LAYER);
     }
 }

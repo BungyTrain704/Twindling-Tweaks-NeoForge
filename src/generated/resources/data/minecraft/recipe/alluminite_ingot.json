@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "twindlingtweaks:alluminite_block"
-    }
+    "twindlingtweaks:alluminite_block"
   ],
   "result": {
     "count": 9,

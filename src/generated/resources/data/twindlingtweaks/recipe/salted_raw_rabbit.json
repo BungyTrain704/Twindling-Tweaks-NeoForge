@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:rabbit"
-    },
-    {
-      "item": "twindlingtweaks:salt"
-    },
-    {
-      "item": "twindlingtweaks:salt"
-    }
+    "minecraft:rabbit",
+    "twindlingtweaks:salt",
+    "twindlingtweaks:salt"
   ],
   "result": {
     "count": 1,

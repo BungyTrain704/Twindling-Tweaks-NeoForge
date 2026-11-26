@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "D": {
-      "item": "twindlingtweaks:dried_mud_ball"
-    },
-    "M": {
-      "item": "twindlingtweaks:mud_block"
-    }
+    "D": "twindlingtweaks:dried_mud_ball",
+    "M": "twindlingtweaks:mud_block"
   },
   "pattern": [
     "DMD",

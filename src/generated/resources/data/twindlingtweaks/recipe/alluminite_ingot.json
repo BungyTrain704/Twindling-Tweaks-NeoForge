@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "A": {
-      "item": "twindlingtweaks:alluminite_nugget"
-    }
+    "A": "twindlingtweaks:alluminite_nugget"
   },
   "pattern": [
     "AAA",

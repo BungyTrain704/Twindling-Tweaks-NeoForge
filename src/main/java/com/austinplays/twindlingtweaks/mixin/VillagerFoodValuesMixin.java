@@ -16,33 +16,22 @@ import java.util.Set;
 @Mixin(Villager.class)
 public abstract class VillagerFoodValuesMixin {
 
-    @Shadow @Final @Mutable
+    @Shadow
+    @Final
+    @Mutable
     private static Map<Item, Integer> FOOD_POINTS;
-
-    @Unique
-    @Final @Mutable
-    private static Set<Item> WANTED_ITEMS;
 
     @Inject(method = "<clinit>", at = @At("TAIL"))
     private static void twindlingtweaks$extendVillagerFood(CallbackInfo ci) {
-        // ---- FOOD POINTS ----
         Map<Item, Integer> food = new HashMap<>(FOOD_POINTS);
+
         food.put(ModItems.CUCUMBER.get(), 1);
         food.put(ModItems.TOMATO.get(), 1);
         food.put(ModItems.LETTUCE.get(), 1);
         food.put(ModItems.ORANGE.get(), 1);
         food.put(ModItems.BROCCOLI.get(), 1);
         food.put(ModItems.CORN.get(), 1);
-        FOOD_POINTS = Map.copyOf(food);
 
-        // ---- WANTED ITEMS ----
-        Set<Item> wanted = new HashSet<>(WANTED_ITEMS);
-        wanted.add(ModItems.CUCUMBER.get());
-        wanted.add(ModItems.TOMATO.get());
-        wanted.add(ModItems.LETTUCE.get());
-        wanted.add(ModItems.ORANGE.get());
-        wanted.add(ModItems.BROCCOLI.get());
-        wanted.add(ModItems.CORN.get());
-        WANTED_ITEMS = Set.copyOf(wanted);
+        FOOD_POINTS = Map.copyOf(food);
     }
 }

@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "C": {
-      "item": "minecraft:crying_obsidian"
-    },
-    "D": {
-      "item": "minecraft:diamond"
-    },
-    "O": {
-      "item": "minecraft:obsidian"
-    }
+    "C": "minecraft:crying_obsidian",
+    "D": "minecraft:diamond",
+    "O": "minecraft:obsidian"
   },
   "pattern": [
     "OCO",

@@ -1,4 +1,4 @@
-// 1.21.1	2026-01-24T13:34:23.8418789	Registries
+// 1.21.3	2026-11-25T19:27:07.375569	Registries
 8d8a247bede228272cb92cc4cef8316e99c75693 data/twindlingtweaks/neoforge/biome_modifier/add_alluminite_ore.json
 91514400bb86d849c2403e86136bb543e6fc3008 data/twindlingtweaks/neoforge/biome_modifier/add_blueberry_bush.json
 2a831047a3bf6e8e289cd2a8ade3b4afe6959d43 data/twindlingtweaks/neoforge/biome_modifier/add_luminium_ore.json
@@ -9,8 +9,8 @@ ecd5fda94652f0f4933e9ba542b688b1a72673d1 data/twindlingtweaks/neoforge/biome_mod
 58c3ebbed9cedd3b23671ce9c64442c64ca99b50 data/twindlingtweaks/neoforge/biome_modifier/add_tree_banana.json
 e7da6f92434428690b5380fca411ab69aa8e2205 data/twindlingtweaks/neoforge/biome_modifier/add_tree_catalpa.json
 66206e6b6fba31f469e111cb34c0e8438bc8a40c data/twindlingtweaks/neoforge/biome_modifier/add_tree_red_maple.json
-b5963971831c3f9f2c412491d37677f43de7d4d9 data/twindlingtweaks/worldgen/biome/catalpa_grove.json
-50c4666f1b1141e2b0c79604c3da8b163e66a006 data/twindlingtweaks/worldgen/biome/red_maple_forest.json
+9e7ac6d14d722234283178f36e570b68f8689791 data/twindlingtweaks/worldgen/biome/catalpa_grove.json
+87d4c737919f276aa083d85dcf5563b95dd86c68 data/twindlingtweaks/worldgen/biome/red_maple_forest.json
 c5c5c8894e2b6807fd03422b5329e604b71a779a data/twindlingtweaks/worldgen/configured_feature/banana.json
 f6b8faadb08966bcf751e083814f9f6d4fb8ed5c data/twindlingtweaks/worldgen/configured_feature/blueberry_bush.json
 58f26b2a198032bb40c00320c4b4eba41cc152e1 data/twindlingtweaks/worldgen/configured_feature/catalpa.json

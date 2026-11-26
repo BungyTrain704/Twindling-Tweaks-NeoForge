@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "A": {
-      "item": "twindlingtweaks:alluminite_nugget"
-    },
-    "L": {
-      "item": "twindlingtweaks:reinforced_luminium_gem"
-    }
+    "A": "twindlingtweaks:alluminite_nugget",
+    "L": "twindlingtweaks:reinforced_luminium_gem"
   },
   "pattern": [
     "AAA",

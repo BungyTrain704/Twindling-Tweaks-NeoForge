@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "twindlingtweaks:alluminite_ingot"
-    }
+    "twindlingtweaks:alluminite_ingot"
   ],
   "result": {
     "count": 9,

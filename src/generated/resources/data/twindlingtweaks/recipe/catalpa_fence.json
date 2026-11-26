@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "catalpa",
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "item": "twindlingtweaks:catalpa_planks"
-    }
+    "#": "minecraft:stick",
+    "W": "twindlingtweaks:catalpa_planks"
   },
   "pattern": [
     "W#W",

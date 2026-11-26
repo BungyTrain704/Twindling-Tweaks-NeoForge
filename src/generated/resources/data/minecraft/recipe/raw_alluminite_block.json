@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "twindlingtweaks:raw_alluminite"
-    }
+    "#": "twindlingtweaks:raw_alluminite"
   },
   "pattern": [
     "###",

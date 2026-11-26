@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:cod"
-    },
-    {
-      "item": "twindlingtweaks:salt"
-    },
-    {
-      "item": "twindlingtweaks:salt"
-    }
+    "minecraft:cod",
+    "twindlingtweaks:salt",
+    "twindlingtweaks:salt"
   ],
   "result": {
     "count": 1,

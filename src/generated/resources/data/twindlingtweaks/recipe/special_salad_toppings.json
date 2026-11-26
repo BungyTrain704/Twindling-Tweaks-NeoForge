@@ -2,21 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "twindlingtweaks:lettuce"
-    },
-    {
-      "item": "twindlingtweaks:tomato"
-    },
-    {
-      "item": "twindlingtweaks:orange"
-    },
-    {
-      "item": "twindlingtweaks:crouton"
-    },
-    {
-      "item": "twindlingtweaks:corn"
-    }
+    "twindlingtweaks:lettuce",
+    "twindlingtweaks:tomato",
+    "twindlingtweaks:orange",
+    "twindlingtweaks:crouton",
+    "twindlingtweaks:corn"
   ],
   "result": {
     "count": 1,

@@ -2,27 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "A": {
-      "item": "minecraft:amethyst_shard"
-    },
-    "B": {
-      "item": "minecraft:golden_boots"
-    },
-    "C": {
-      "item": "twindlingtweaks:blue_dirt_schematic"
-    },
-    "G": {
-      "item": "minecraft:gold_block"
-    },
-    "H": {
-      "item": "minecraft:golden_helmet"
-    },
-    "L": {
-      "item": "minecraft:golden_leggings"
-    },
-    "P": {
-      "item": "minecraft:golden_chestplate"
-    }
+    "A": "minecraft:amethyst_shard",
+    "B": "minecraft:golden_boots",
+    "C": "twindlingtweaks:blue_dirt_schematic",
+    "G": "minecraft:gold_block",
+    "H": "minecraft:golden_helmet",
+    "L": "minecraft:golden_leggings",
+    "P": "minecraft:golden_chestplate"
   },
   "pattern": [
     "AHA",

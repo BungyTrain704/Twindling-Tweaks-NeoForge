@@ -2,30 +2,14 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "twindlingtweaks:lettuce"
-    },
-    {
-      "item": "twindlingtweaks:crouton"
-    },
-    {
-      "item": "twindlingtweaks:tomato"
-    },
-    {
-      "item": "twindlingtweaks:orange"
-    },
-    {
-      "item": "twindlingtweaks:boiled_egg"
-    },
-    {
-      "item": "twindlingtweaks:banana"
-    },
-    {
-      "item": "twindlingtweaks:blueberries"
-    },
-    {
-      "item": "twindlingtweaks:raspberries"
-    }
+    "twindlingtweaks:lettuce",
+    "twindlingtweaks:crouton",
+    "twindlingtweaks:tomato",
+    "twindlingtweaks:orange",
+    "twindlingtweaks:boiled_egg",
+    "twindlingtweaks:banana",
+    "twindlingtweaks:blueberries",
+    "twindlingtweaks:raspberries"
   ],
   "result": {
     "count": 1,

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "twindlingtweaks:catalpa_flowers"
-    }
+    "twindlingtweaks:catalpa_flowers"
   ],
   "result": {
     "count": 1,

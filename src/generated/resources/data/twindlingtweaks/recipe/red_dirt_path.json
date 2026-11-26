@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "twindlingtweaks:red_dirt"
-    },
-    {
-      "item": "twindlingtweaks:red_dirt_path_schematic"
-    }
+    "twindlingtweaks:red_dirt",
+    "twindlingtweaks:red_dirt_path_schematic"
   ],
   "result": {
     "count": 6,

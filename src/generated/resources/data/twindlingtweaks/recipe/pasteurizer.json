@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "C": {
-      "item": "minecraft:coal_block"
-    },
-    "H": {
-      "item": "minecraft:hay_block"
-    },
-    "R": {
-      "item": "twindlingtweaks:red_maple_planks"
-    }
+    "C": "minecraft:coal_block",
+    "H": "minecraft:hay_block",
+    "R": "twindlingtweaks:red_maple_planks"
   },
   "pattern": [
     "RHR",

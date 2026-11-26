@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "twindlingtweaks:unfiltered_sugar_block"
-    }
+    "twindlingtweaks:unfiltered_sugar_block"
   ],
   "result": {
     "count": 9,

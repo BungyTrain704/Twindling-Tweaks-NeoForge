@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "twindlingtweaks:catalpa_planks"
-    }
+    "#": "twindlingtweaks:catalpa_planks"
   },
   "pattern": [
     "###"

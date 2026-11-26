@@ -2,15 +2,9 @@
   "type": "twindlingtweaks:forging",
   "id": "twindlingtweaks:reinforced_luminium_gem",
   "ingredients": [
-    {
-      "tag": "twindlingtweaks:above_diamond_hammers"
-    },
-    {
-      "item": "twindlingtweaks:reinforced_obsidian"
-    },
-    {
-      "item": "twindlingtweaks:luminium_gem"
-    }
+    "#twindlingtweaks:above_diamond_hammers",
+    "twindlingtweaks:reinforced_obsidian",
+    "twindlingtweaks:luminium_gem"
   ],
   "output": {
     "count": 1,

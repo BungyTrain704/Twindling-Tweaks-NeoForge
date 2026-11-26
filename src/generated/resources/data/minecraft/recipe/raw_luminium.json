@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "twindlingtweaks:raw_luminium_block"
-    }
+    "twindlingtweaks:raw_luminium_block"
   ],
   "result": {
     "count": 9,

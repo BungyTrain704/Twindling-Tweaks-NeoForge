@@ -3,9 +3,7 @@
   "category": "building",
   "group": "planks",
   "ingredients": [
-    {
-      "tag": "twindlingtweaks:catalpa_logs"
-    }
+    "#twindlingtweaks:catalpa_logs"
   ],
   "result": {
     "count": 4,

@@ -3,12 +3,8 @@
   "category": "redstone",
   "group": "red_maple",
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "item": "twindlingtweaks:red_maple_planks"
-    }
+    "#": "minecraft:stick",
+    "W": "twindlingtweaks:red_maple_planks"
   },
   "pattern": [
     "#W#",

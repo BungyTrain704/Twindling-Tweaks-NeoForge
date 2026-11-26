@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:bowl"
-    },
-    {
-      "item": "twindlingtweaks:spring_salad_toppings"
-    },
-    {
-      "item": "twindlingtweaks:ranch_bottle"
-    }
+    "minecraft:bowl",
+    "twindlingtweaks:spring_salad_toppings",
+    "twindlingtweaks:ranch_bottle"
   ],
   "result": {
     "count": 1,

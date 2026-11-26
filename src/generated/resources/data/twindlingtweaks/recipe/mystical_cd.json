@@ -2,30 +2,14 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "twindlingtweaks:disc_fragment_m"
-    },
-    {
-      "item": "twindlingtweaks:disc_fragment_m"
-    },
-    {
-      "item": "twindlingtweaks:disc_fragment_m"
-    },
-    {
-      "item": "twindlingtweaks:disc_fragment_m"
-    },
-    {
-      "item": "twindlingtweaks:disc_fragment_m"
-    },
-    {
-      "item": "twindlingtweaks:disc_fragment_m"
-    },
-    {
-      "item": "twindlingtweaks:disc_fragment_m"
-    },
-    {
-      "item": "twindlingtweaks:disc_fragment_m"
-    }
+    "twindlingtweaks:disc_fragment_m",
+    "twindlingtweaks:disc_fragment_m",
+    "twindlingtweaks:disc_fragment_m",
+    "twindlingtweaks:disc_fragment_m",
+    "twindlingtweaks:disc_fragment_m",
+    "twindlingtweaks:disc_fragment_m",
+    "twindlingtweaks:disc_fragment_m",
+    "twindlingtweaks:disc_fragment_m"
   ],
   "result": {
     "count": 1,

@@ -2,9 +2,7 @@
   "type": "twindlingtweaks:filterer",
   "id": "twindlingtweaks:luminium_chunk",
   "ingredients": [
-    {
-      "item": "twindlingtweaks:unprocessed_luminium_chunk"
-    }
+    "twindlingtweaks:unprocessed_luminium_chunk"
   ],
   "output": {
     "count": 1,

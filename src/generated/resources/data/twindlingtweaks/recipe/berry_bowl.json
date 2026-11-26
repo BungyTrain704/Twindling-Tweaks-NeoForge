@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "twindlingtweaks:blueberries"
-    },
-    {
-      "item": "minecraft:bowl"
-    },
-    {
-      "item": "twindlingtweaks:raspberries"
-    }
+    "twindlingtweaks:blueberries",
+    "minecraft:bowl",
+    "twindlingtweaks:raspberries"
   ],
   "result": {
     "count": 1,

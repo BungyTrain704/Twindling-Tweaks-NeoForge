@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:bread"
-    },
-    {
-      "item": "twindlingtweaks:cooking_knife"
-    }
+    "minecraft:bread",
+    "twindlingtweaks:cooking_knife"
   ],
   "result": {
     "count": 8,

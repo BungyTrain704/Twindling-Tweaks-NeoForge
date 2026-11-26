@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "sign",
   "key": {
-    "#": {
-      "item": "twindlingtweaks:red_maple_planks"
-    },
-    "X": {
-      "item": "minecraft:stick"
-    }
+    "#": "twindlingtweaks:red_maple_planks",
+    "X": "minecraft:stick"
   },
   "pattern": [
     "###",

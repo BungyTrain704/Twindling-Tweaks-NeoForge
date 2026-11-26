@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:porkchop"
-    },
-    {
-      "item": "twindlingtweaks:salt"
-    },
-    {
-      "item": "twindlingtweaks:salt"
-    }
+    "minecraft:porkchop",
+    "twindlingtweaks:salt",
+    "twindlingtweaks:salt"
   ],
   "result": {
     "count": 1,

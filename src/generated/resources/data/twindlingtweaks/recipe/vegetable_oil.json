@@ -2,18 +2,10 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:glass_bottle"
-    },
-    {
-      "item": "twindlingtweaks:crushed_tomato"
-    },
-    {
-      "item": "twindlingtweaks:lettuce"
-    },
-    {
-      "item": "twindlingtweaks:salt"
-    }
+    "minecraft:glass_bottle",
+    "twindlingtweaks:crushed_tomato",
+    "twindlingtweaks:lettuce",
+    "twindlingtweaks:salt"
   ],
   "result": {
     "count": 1,

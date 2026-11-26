@@ -2,18 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "A": {
-      "item": "twindlingtweaks:reinforced_alluminite_ingot"
-    },
-    "C": {
-      "item": "twindlingtweaks:basic_dirt_schematic"
-    },
-    "D": {
-      "item": "minecraft:diamond"
-    },
-    "L": {
-      "item": "minecraft:lapis_block"
-    }
+    "A": "twindlingtweaks:reinforced_alluminite_ingot",
+    "C": "twindlingtweaks:basic_dirt_schematic",
+    "D": "minecraft:diamond",
+    "L": "minecraft:lapis_block"
   },
   "pattern": [
     "LLL",

@@ -2,18 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "A": {
-      "item": "twindlingtweaks:reinforced_alluminite_ingot"
-    },
-    "G": {
-      "item": "minecraft:gold_block"
-    },
-    "I": {
-      "item": "minecraft:iron_block"
-    },
-    "O": {
-      "item": "twindlingtweaks:reinforced_obsidian"
-    }
+    "A": "twindlingtweaks:reinforced_alluminite_ingot",
+    "G": "minecraft:gold_block",
+    "I": "minecraft:iron_block",
+    "O": "twindlingtweaks:reinforced_obsidian"
   },
   "pattern": [
     "IOI",

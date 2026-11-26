@@ -3,9 +3,7 @@
   "category": "building",
   "group": "catalpa",
   "key": {
-    "#": {
-      "item": "twindlingtweaks:catalpa_planks"
-    }
+    "#": "twindlingtweaks:catalpa_planks"
   },
   "pattern": [
     "#  ",

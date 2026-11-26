@@ -1,11 +1,7 @@
-// 1.21.1	2026-11-10T18:50:46.2962146	Tags for minecraft:item mod id twindlingtweaks
+// 1.21.3	2026-11-25T19:27:07.376569	Tags for minecraft:item mod id twindlingtweaks
 bba1f0b3f30c75c8441638744ce0772cf4cfaff2 data/c/tags/item/buckets.json
 bba1f0b3f30c75c8441638744ce0772cf4cfaff2 data/c/tags/item/buckets/milk.json
 e633bf895f0f277db18e7641c0141fe6aac4d687 data/c/tags/item/crops.json
-8544e9a931db634b812bb104a43bb54a015e50b8 data/c/tags/item/drinks.json
-2d88a8889bab185ef00b697194c35bc50884063f data/c/tags/item/drinks/magic.json
-bba1f0b3f30c75c8441638744ce0772cf4cfaff2 data/c/tags/item/drinks/milk.json
-bec5d6857f8666f3a847ba460ff4d18eb5d08c41 data/c/tags/item/drinks/watery.json
 29d184262dca58710e7ee71e43de84ab56ee3c3b data/c/tags/item/dusts.json
 f122eac6ee813d7e866ca6cc7794e7a0616789aa data/c/tags/item/eggs.json
 c53f4e6279bd829913f36253b3e62ed4198a8619 data/c/tags/item/fences.json
@@ -95,11 +91,13 @@ e024c056001c1ba8e0ad38b1baadeb2d0fde8c2e data/minecraft/tags/item/wooden_stairs.
 f2493037a1869b2ba72f04eb70ba7b066a478617 data/twindlingtweaks/tags/item/above_obsidian_hammers.json
 5ab33818dc201c8a267781813ca6279a72c23dab data/twindlingtweaks/tags/item/above_stone_hammers.json
 18e6c8a2dac8ee5fb52f8ca9665acde9c0ddee96 data/twindlingtweaks/tags/item/alluminite_ores.json
+492f0305c3240d2bb65329c1dd80e6f7135d7113 data/twindlingtweaks/tags/item/alluminite_repairable.json
 156e7c3c158e896c7e64a8802e22d193e7782b25 data/twindlingtweaks/tags/item/catalpa_logs.json
 5ab33818dc201c8a267781813ca6279a72c23dab data/twindlingtweaks/tags/item/hammers.json
 6d9bfa345ea3bea400f4cd3a0a680adbf1e5935b data/twindlingtweaks/tags/item/knives.json
 dee53dc64fe5dc7f82edb1327f7e33421003d94e data/twindlingtweaks/tags/item/luminium_ores.json
 f8a04d1caf5a794b65d22c1420ccf83adff66b32 data/twindlingtweaks/tags/item/mud_ores.json
+1886bef73e30c66e0bb4ccda8138598bfcef8003 data/twindlingtweaks/tags/item/obsidian_repairable.json
 8797d65fac4c425db6e771db3cc76e6b0160f886 data/twindlingtweaks/tags/item/red_maple_logs.json
 91dc609b5e38b2a47dd8bdcf142beec6da7b687e data/twindlingtweaks/tags/item/salt_ores.json
 0a914999e07c1dd19c0a863e82c6beb9757b22ac data/twindlingtweaks/tags/item/sugar_ores.json

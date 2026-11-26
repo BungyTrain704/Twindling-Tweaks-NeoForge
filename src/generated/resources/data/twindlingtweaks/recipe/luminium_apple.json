@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "twindlingtweaks:luminium_block"
-    },
-    "-": {
-      "item": "minecraft:golden_apple"
-    }
+    "#": "twindlingtweaks:luminium_block",
+    "-": "minecraft:golden_apple"
   },
   "pattern": [
     "###",
